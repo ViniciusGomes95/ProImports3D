@@ -4,12 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pro Imports 3D | Início</title>
-  
-  <!-- Favicon -->
   <link rel="icon" type="image/png" href="logo.png">
-  <link rel="apple-touch-icon" href="logo.png">
-
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -37,22 +32,8 @@
       display: flex;
       flex-direction: column;
       position: relative;
-      overflow-x: hidden;
     }
 
-    .bg-gradient-1 {
-      position: fixed; top: -10%; left: -10%; width: 45vw; height: 45vw;
-      border-radius: 50%; background: radial-gradient(circle, rgba(14, 165, 233, 0.12) 0%, rgba(255, 255, 255, 0) 70%);
-      z-index: -1; pointer-events: none;
-    }
-
-    .bg-gradient-2 {
-      position: fixed; bottom: -10%; right: -10%; width: 50vw; height: 50vw;
-      border-radius: 50%; background: radial-gradient(circle, rgba(249, 115, 22, 0.10) 0%, rgba(255, 255, 255, 0) 70%);
-      z-index: -1; pointer-events: none;
-    }
-
-    /* HEADER & MENU COM PERSONAGEM ANIMADO */
     header {
       width: 100%;
       background: rgba(255, 255, 255, 0.92);
@@ -65,52 +46,12 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
-    }
-
-    .header-track {
-      position: absolute;
-      bottom: -2px;
-      left: 0;
-      width: 100%;
-      height: 2px;
-      background: linear-gradient(90deg, transparent, var(--accent-cyan), var(--accent-orange), transparent);
-      opacity: 0.3;
-    }
-
-    .funko-walker {
-      position: absolute;
-      bottom: 2px;
-      left: -50px;
-      width: 36px;
-      height: 42px;
-      z-index: 1001;
-      pointer-events: none;
-      animation: walkAcross 18s linear infinite, bobbing 0.4s ease-in-out infinite alternate;
-    }
-
-    @keyframes walkAcross {
-      0% { left: -50px; transform: scaleX(1); }
-      48% { transform: scaleX(1); }
-      50% { left: calc(100% + 10px); transform: scaleX(-1); }
-      98% { transform: scaleX(-1); }
-      100% { left: -50px; transform: scaleX(1); }
-    }
-
-    @keyframes bobbing {
-      0% { transform: translateY(0px); }
-      100% { transform: translateY(-3px); }
     }
 
     .nav-logo img {
       height: 40px;
       width: auto;
       display: block;
-      transition: transform 0.2s ease;
-    }
-
-    .nav-logo img:hover {
-      transform: scale(1.03);
     }
 
     nav {
@@ -126,7 +67,6 @@
       font-size: 1.05rem;
       padding: 0.5rem 0.75rem;
       border-radius: 8px;
-      position: relative;
       transition: all 0.25s ease;
     }
 
@@ -140,18 +80,6 @@
       font-weight: 700;
     }
 
-    nav a.active::after {
-      content: '';
-      position: absolute;
-      bottom: -4px;
-      left: 10%;
-      width: 80%;
-      height: 3px;
-      background: linear-gradient(90deg, var(--accent-cyan), var(--accent-orange));
-      border-radius: 10px;
-    }
-
-    /* CONTEÚDO PRINCIPAL */
     .container {
       max-width: 900px;
       width: 100%;
@@ -177,93 +105,18 @@
       object-fit: contain;
     }
 
-    .badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.4rem 1rem;
-      background-color: rgba(2, 132, 199, 0.08);
-      color: var(--accent-cyan);
-      border: 1px solid rgba(2, 132, 199, 0.2);
-      border-radius: 50px;
-      font-size: 0.875rem;
-      font-weight: 600;
-      margin-bottom: 1.5rem;
-    }
-
-    .badge-dot {
-      width: 8px;
-      height: 8px;
-      background-color: var(--accent-cyan);
-      border-radius: 50%;
-      display: inline-block;
-      animation: pulse 2s infinite;
-    }
-
-    @keyframes pulse {
-      0% { transform: scale(0.95); opacity: 0.8; }
-      50% { transform: scale(1.2); opacity: 1; }
-      100% { transform: scale(0.95); opacity: 0.8; }
-    }
-
     h1 {
       font-size: 2.25rem;
       font-weight: 700;
-      line-height: 1.25;
       color: var(--text-main);
       margin-bottom: 1rem;
-      letter-spacing: -0.02em;
     }
 
     .subtitle {
       font-size: 1.125rem;
       color: var(--text-muted);
       margin-bottom: 3rem;
-      max-width: 650px;
-      margin-left: auto;
-      margin-right: auto;
       line-height: 1.6;
-    }
-
-    .features-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
-      text-align: left;
-    }
-
-    .card {
-      background: var(--card-bg);
-      border: 1px solid var(--border-color);
-      padding: 1.75rem;
-      border-radius: 16px;
-      box-shadow: var(--shadow-sm);
-      transition: all 0.3s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-3px);
-      box-shadow: var(--shadow-lg);
-      border-color: rgba(2, 132, 199, 0.3);
-    }
-
-    .card-icon {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-
-    .card h3 {
-      font-size: 1.1rem;
-      font-weight: 600;
-      color: var(--text-main);
-      margin-bottom: 0.5rem;
-    }
-
-    .card p {
-      font-size: 0.9rem;
-      color: var(--text-muted);
-      line-height: 1.5;
-      margin-bottom: 0;
     }
 
     footer {
@@ -275,20 +128,36 @@
       font-size: 0.875rem;
       margin-top: auto;
     }
-
-    @media (max-width: 768px) {
-      header { padding: 0.8rem 1rem; }
-      nav { gap: 0.75rem; }
-      nav a { font-size: 0.9rem; padding: 0.3rem 0.4rem; }
-      h1 { font-size: 1.75rem; }
-    }
   </style>
 </head>
 <body>
 
-  <div class="bg-gradient-1"></div>
-  <div class="bg-gradient-2"></div>
-
-  <!-- HEADER COM MENU ATUALIZADO E PERSONAGEM -->
   <header>
     <div class="nav-logo">
+      <a href="index.html"><img src="logo.png" alt="Pro Imports 3D"></a>
+    </div>
+    <nav>
+      <a href="index.html" class="active">Início</a>
+      <a href="filamentos.html">Filamentos</a>
+      <a href="impressoes.html">Impressões 3D</a>
+      <a href="contato.html">Contato</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <div class="logo-container">
+      <img src="logo.png" alt="Pro Imports 3D Logo" class="logo-img">
+    </div>
+
+    <h1>Soluções de Alta Precisão em Impressão 3D</h1>
+    <p class="subtitle">
+      Revenda autorizada de filamentos Masterprint e desenvolvimento de peças personalizadas.
+    </p>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 Pro Imports 3D. Todos os direitos reservados.</p>
+  </footer>
+
+</body>
+</html>
