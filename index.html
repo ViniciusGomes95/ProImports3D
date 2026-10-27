@@ -1,458 +1,260 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pro Imports 3D - Site em Construção</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --bg-main: #0B0E14;
-            --bg-card: #151A23;
-            --bg-card-hover: #1E2532;
-            --accent-cyan: #00f2fe;
-            --accent-blue: #4facfe;
-            --accent-petg: #ff9f43;
-            --accent-pla: #10ac84;
-            --text-primary: #FFFFFF;
-            --text-secondary: #94A3B8;
-            --border-color: #2A3447;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pro Imports 3D | Em Breve</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --bg-body: #f8fafc;
+      --card-bg: #ffffff;
+      --text-main: #0f172a;
+      --text-muted: #64748b;
+      --accent-cyan: #0284c7;
+      --accent-orange: #f97316;
+      --border-color: #e2e8f0;
+      --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+      --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+    }
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Montserrat', sans-serif;
-        }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        body {
-            background-color: var(--bg-main);
-            color: var(--text-primary);
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: flex-start;
-            padding: 2rem 1rem;
-            overflow-x: hidden;
-        }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1rem;
+      position: relative;
+      overflow-x: hidden;
+    }
 
-        /* Container Principal */
-        .container {
-            max-width: 1000px;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 2.5rem;
-        }
+    /* Degradês Sutis de Fundo (Glow Effect Clean) */
+    .bg-gradient-1 {
+      position: absolute;
+      top: -10%;
+      left: -10%;
+      width: 45vw;
+      height: 45vw;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(14, 165, 233, 0.12) 0%, rgba(255, 255, 255, 0) 70%);
+      z-index: -1;
+      pointer-events: none;
+    }
 
-        /* Header e Logo */
-        .header {
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 1rem;
-            margin-top: 1rem;
-        }
+    .bg-gradient-2 {
+      position: absolute;
+      bottom: -10%;
+      right: -10%;
+      width: 50vw;
+      height: 50vw;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(249, 115, 22, 0.10) 0%, rgba(255, 255, 255, 0) 70%);
+      z-index: -1;
+      pointer-events: none;
+    }
 
-        .logo-wrapper {
-            background: #ffffff;
-            padding: 1.5rem 2.5rem;
-            border-radius: 16px;
-            box-shadow: 0 10px 30px rgba(0, 242, 254, 0.15);
-            display: inline-block;
-            transition: transform 0.3s ease;
-        }
+    /* Layout Container */
+    .container {
+      max-width: 800px;
+      width: 100%;
+      text-align: center;
+      z-index: 1;
+    }
 
-        .logo-wrapper:hover {
-            transform: scale(1.02);
-        }
+    /* Header & Logo */
+    .logo-container {
+      margin-bottom: 2rem;
+      display: inline-block;
+    }
 
-        .logo-svg {
-            width: 260px;
-            height: auto;
-            display: block;
-        }
+    .logo-img {
+      max-width: 220px;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      object-fit: contain;
+    }
 
-        /* Status Badge */
-        .status-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.6rem;
-            background: rgba(0, 242, 254, 0.1);
-            border: 1px solid var(--accent-cyan);
-            color: var(--accent-cyan);
-            padding: 0.5rem 1.2rem;
-            border-radius: 50px;
-            font-size: 0.85rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-        }
+    /* Badge Em Breve */
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.4rem 1rem;
+      background-color: rgba(2, 132, 199, 0.08);
+      color: var(--accent-cyan);
+      border: 1px solid rgba(2, 132, 199, 0.2);
+      border-radius: 50px;
+      font-size: 0.875rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+    }
 
-        .pulse-dot {
-            width: 10px;
-            height: 10px;
-            background-color: var(--accent-cyan);
-            border-radius: 50%;
-            box-shadow: 0 0 10px var(--accent-cyan);
-            animation: pulse 1.5s infinite;
-        }
+    .badge-dot {
+      width: 8px;
+      height: 8px;
+      background-color: var(--accent-cyan);
+      border-radius: 50%;
+      display: inline-block;
+      animation: pulse 2s infinite;
+    }
 
-        @keyframes pulse {
-            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(0, 242, 254, 0.7); }
-            70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(0, 242, 254, 0); }
-            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(0, 242, 254, 0); }
-        }
+    @keyframes pulse {
+      0% { transform: scale(0.95); opacity: 0.8; }
+      50% { transform: scale(1.2); opacity: 1; }
+      100% { transform: scale(0.95); opacity: 0.8; }
+    }
 
-        /* Título e Subtítulo */
-        .hero-text {
-            text-align: center;
-            max-width: 650px;
-        }
+    /* Textos */
+    h1 {
+      font-size: 2.25rem;
+      font-weight: 700;
+      line-height: 1.25;
+      color: var(--text-main);
+      margin-bottom: 1rem;
+      letter-spacing: -0.02em;
+    }
 
-        .hero-text h1 {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 0.8rem;
-            background: linear-gradient(135deg, #ffffff 0%, #a5b4fc 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
+    .subtitle {
+      font-size: 1.125rem;
+      color: var(--text-muted);
+      margin-bottom: 2.5rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.6;
+    }
 
-        .hero-text p {
-            color: var(--text-secondary);
-            font-size: 1.05rem;
-            line-height: 1.6;
-        }
+    /* Grid de Cards */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.25rem;
+      margin-bottom: 3rem;
+      text-align: left;
+    }
 
-        /* Animação do Bico de Impressão 3D */
-        .printer-canvas-container {
-            width: 100%;
-            height: 180px;
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
-            border-radius: 16px;
-            position: relative;
-            overflow: hidden;
-            box-shadow: inset 0 0 20px rgba(0,0,0,0.5);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      padding: 1.5rem;
+      border-radius: 16px;
+      box-shadow: var(--shadow-sm);
+      transition: all 0.3s ease;
+    }
 
-        .hotend-nozzle {
-            position: absolute;
-            top: 20px;
-            width: 30px;
-            height: 40px;
-            background: linear-gradient(180deg, #64748b, #334155);
-            clip-path: polygon(0 0, 100% 0, 70% 80%, 55% 100%, 45% 100%, 30% 80%);
-            animation: moveNozzle 4s ease-in-out infinite alternate;
-            z-index: 10;
-        }
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-lg);
+      border-color: rgba(2, 132, 199, 0.3);
+    }
 
-        .nozzle-tip-glow {
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 6px;
-            height: 6px;
-            background: #ff5e00;
-            border-radius: 50%;
-            box-shadow: 0 0 10px #ff5e00, 0 0 20px #ff9500;
-        }
+    .card-icon {
+      font-size: 1.75rem;
+      margin-bottom: 0.75rem;
+    }
 
-        .printed-layer {
-            position: absolute;
-            bottom: 35px;
-            height: 6px;
-            background: linear-gradient(90deg, var(--accent-cyan), var(--accent-blue));
-            border-radius: 3px;
-            box-shadow: 0 0 12px var(--accent-cyan);
-            animation: growLayer 4s ease-in-out infinite alternate;
-        }
+    .card h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text-main);
+      margin-bottom: 0.35rem;
+    }
 
-        .print-bed-grid {
-            position: absolute;
-            bottom: 25px;
-            width: 80%;
-            height: 10px;
-            background: #1e293b;
-            border-top: 2px solid #334155;
-            border-radius: 2px;
-        }
+    .card p {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
 
-        @keyframes moveNozzle {
-            0% { left: 20%; }
-            100% { left: 75%; }
-        }
+    /* Footer */
+    footer {
+      margin-top: auto;
+      padding-top: 2rem;
+      color: var(--text-muted);
+      font-size: 0.875rem;
+    }
 
-        @keyframes growLayer {
-            0% { width: 0%; left: 20%; }
-            100% { width: 55%; left: 20%; }
-        }
+    footer a {
+      color: var(--accent-cyan);
+      text-decoration: none;
+      font-weight: 500;
+    }
 
-        /* Seção de Personagens e Produtos */
-        .showcase-section {
-            width: 100%;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 1.4rem;
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-            color: var(--text-primary);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.5rem;
-        }
-
-        .cards-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 1.5rem;
-            width: 100%;
-        }
-
-        .card {
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
-            border-radius: 16px;
-            padding: 1.5rem;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            gap: 1rem;
-            transition: all 0.3s ease;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-            background: var(--bg-card-hover);
-            border-color: var(--accent-cyan);
-            box-shadow: 0 10px 25px rgba(0, 242, 254, 0.1);
-        }
-
-        .card-icon {
-            width: 50px;
-            height: 50px;
-            border-radius: 12px;
-            background: rgba(255, 255, 255, 0.05);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.8rem;
-        }
-
-        .card-tag {
-            font-size: 0.75rem;
-            font-weight: 700;
-            padding: 0.25rem 0.6rem;
-            border-radius: 6px;
-            text-transform: uppercase;
-        }
-
-        .tag-petg {
-            background: rgba(255, 159, 67, 0.15);
-            color: var(--accent-petg);
-            border: 1px solid var(--accent-petg);
-        }
-
-        .tag-pla {
-            background: rgba(16, 172, 132, 0.15);
-            color: var(--accent-pla);
-            border: 1px solid var(--accent-pla);
-        }
-
-        .card h3 {
-            font-size: 1.15rem;
-            color: var(--text-primary);
-        }
-
-        .card p {
-            font-size: 0.9rem;
-            color: var(--text-secondary);
-            line-height: 1.5;
-        }
-
-        /* Botões de Ação e Redes */
-        .actions-wrapper {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 1rem;
-            width: 100%;
-            margin-top: 1rem;
-        }
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.8rem;
-            padding: 0.9rem 1.8rem;
-            border-radius: 12px;
-            font-weight: 700;
-            font-size: 0.95rem;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            cursor: pointer;
-            border: none;
-        }
-
-        .btn-shopee {
-            background: #EE4D2D;
-            color: #ffffff;
-            box-shadow: 0 4px 15px rgba(238, 77, 45, 0.3);
-        }
-
-        .btn-shopee:hover {
-            background: #ff5b3a;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(238, 77, 45, 0.4);
-        }
-
-        .btn-whatsapp {
-            background: #25D366;
-            color: #ffffff;
-            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
-        }
-
-        .btn-whatsapp:hover {
-            background: #22e36b;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
-        }
-
-        /* Footer */
-        .footer {
-            margin-top: 2rem;
-            text-align: center;
-            color: var(--text-secondary);
-            font-size: 0.85rem;
-            border-top: 1px solid var(--border-color);
-            padding-top: 1.5rem;
-            width: 100%;
-        }
-
-        /* Responsividade */
-        @media (max-width: 600px) {
-            .hero-text h1 {
-                font-size: 1.8rem;
-            }
-            .logo-svg {
-                width: 200px;
-            }
-            .actions-wrapper {
-                flex-direction: column;
-            }
-            .btn {
-                width: 100%;
-            }
-        }
-    </style>
+    /* Responsividade */
+    @media (max-width: 640px) {
+      h1 { font-size: 1.75rem; }
+      .subtitle { font-size: 1rem; }
+      .logo-img { max-width: 180px; }
+    }
+  </style>
 </head>
 <body>
 
-    <div class="container">
-        
-        <!-- Header com Logo Oficial -->
-        <header class="header">
-            <div class="logo-wrapper">
-                <!-- SVG fiel ao Logo da Pro Imports 3D -->
-                <svg class="logo-svg" viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg">
-                    <g fill="#000000">
-                        <!-- Letra P -->
-                        <path d="M 30,30 L 110,30 C 145,30 145,85 110,85 L 65,85 L 65,135 L 30,135 Z M 65,55 L 65,62 L 105,62 C 118,62 118,55 105,55 Z" />
-                        <!-- Letra R com looping contínuo para o O -->
-                        <path d="M 125,30 L 205,30 C 235,30 235,80 205,80 L 170,80 L 170,135 L 135,135 L 135,30 Z M 170,55 L 170,60 L 198,60 C 208,60 208,55 198,55 Z" />
-                        <!-- Letra O (elipse externa e interna) -->
-                        <path d="M 285,30 C 335,30 375,52 375,82 C 375,112 335,135 285,135 C 235,135 195,112 195,82 C 195,52 235,30 285,30 Z M 285,55 C 255,55 230,67 230,82 C 230,97 255,110 285,110 C 315,110 340,97 340,82 C 340,67 315,55 285,55 Z" />
-                        <!-- Texto IMPORTS -->
-                        <text x="200" y="195" font-family="'Montserrat', 'Arial Black', sans-serif" font-size="46" font-weight="900" letter-spacing="9" text-anchor="middle">IMPORTS</text>
-                    </g>
-                </svg>
-            </div>
+  <!-- Degradês de Fundo -->
+  <div class="bg-gradient-1"></div>
+  <div class="bg-gradient-2"></div>
 
-            <div class="status-badge">
-                <span class="pulse-dot"></span>
-                Novo Site em Criação
-            </div>
-        </header>
-
-        <!-- Texto principal -->
-        <section class="hero-text">
-            <h1>Sua ideia moldada em cada camada</h1>
-            <p>Estamos preparando uma plataforma completa para apresentação de projetos, catálogo de impressões em filamento e pedidos personalizados.</p>
-        </section>
-
-        <!-- Animação do Bico de Impressão 3D -->
-        <div class="printer-canvas-container">
-            <div class="hotend-nozzle">
-                <div class="nozzle-tip-glow"></div>
-            </div>
-            <div class="printed-layer"></div>
-            <div class="print-bed-grid"></div>
-        </div>
-
-        <!-- Personagens e Produtos em Produção -->
-        <section class="showcase-section">
-            <h2 class="section-title">📦 O que produzimos na Pro Imports 3D</h2>
-            
-            <div class="cards-grid">
-                <!-- Card 1: Action Figures -->
-                <div class="card">
-                    <div class="card-icon">🗿</div>
-                    <span class="card-tag tag-pla">Filamento PLA / PETG</span>
-                    <h3>Action Figures & Personagens</h3>
-                    <p>Impressão detalhada de figuras colecionáveis, estátuas musculosas e personagens com acamento preciso de camadas.</p>
-                </div>
-
-                <!-- Card 2: Cortadores -->
-                <div class="card">
-                    <div class="card-icon">🍪</div>
-                    <span class="card-tag tag-petg">Filamento PETG</span>
-                    <h3>Cortadores de Massa e Biscoito</h3>
-                    <p>Produzidos em PETG resistente e seguro, desenvolvidos sob medida para confeitaria e artesanato.</p>
-                </div>
-
-                <!-- Card 3: Suportes Temáticos -->
-                <div class="card">
-                    <div class="card-icon">🔑</div>
-                    <span class="card-tag tag-pla">Projetos Especiais</span>
-                    <h3>Suportes de Chave Exclusivos</h3>
-                    <p>Suportes organizadores temáticos com 5 ganchos (Automotivos, Esportivos e Projetos Especiais de Clientes).</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Botões de Ação para a Loja Oficial na Shopee -->
-        <div class="actions-wrapper">
-            <a href="https://shopee.com.br" target="_blank" class="btn btn-shopee">
-                🛍️ Visitar Nossa Loja na Shopee
-            </a>
-            <a href="https://wa.me/5511999999999" target="_blank" class="btn btn-whatsapp">
-                💬 Faça seu Orçamento no WhatsApp
-            </a>
-        </div>
-
-        <!-- Rodapé -->
-        <footer class="footer">
-            <p>© 2026 Pro Imports 3D — Todos os direitos reservados.</p>
-            <p style="margin-top: 0.4rem; color: #64748b;">Ferraz de Vasconcelos, SP • Impressão 3D em Filamentos High-Quality</p>
-        </footer>
-
+  <div class="container">
+    
+    <!-- Logo Oficial -->
+    <div class="logo-container">
+      <img src="logo.png" alt="Pro Imports 3D Logo" class="logo-img">
     </div>
+
+    <!-- Status Badge -->
+    <div class="badge">
+      <span class="badge-dot"></span>
+      Novo Site em Desenvolvimento
+    </div>
+
+    <!-- Título Principal -->
+    <h1>Soluções de Alta Precisão em Impressão 3D</h1>
+    <p class="subtitle">
+      Estamos a preparar o nosso novo catálogo online com produtos exclusivos, colecionáveis e peças personalizadas.
+    </p>
+
+    <!-- Destaques Clean -->
+    <div class="features-grid">
+      <div class="card">
+        <div class="card-icon">⚙️</div>
+        <h3>Tecnologia FDM</h3>
+        <p>Impressão 3D com acabamento de alta definição e precisão milimétrica.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">🧵</div>
+        <h3>Materiais Premium</h3>
+        <p>Projetos em PETG e PLA com máxima durabilidade e resistência.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">🎨</div>
+        <h3>Projetos Especiais</h3>
+        <p>Desenvolvimento sob medida para chaveiros, utilidades e colecionáveis.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>&copy; Pro Imports 3D. Todos os direitos reservados.</p>
+  </footer>
 
 </body>
 </html>
