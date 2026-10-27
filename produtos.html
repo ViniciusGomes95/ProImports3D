@@ -3,42 +3,304 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pro Imports 3D | Produtos</title>
+  <title>Pro Imports 3D | Produtos e Filamentos</title>
   <link rel="icon" type="image/png" href="logo.png">
+  <link rel="apple-touch-icon" href="logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
   <style>
     :root {
-      --bg-body: #f8fafc; --card-bg: #ffffff; --text-main: #0f172a; --text-muted: #64748b;
-      --accent-cyan: #0284c7; --accent-orange: #f97316; --border-color: #e2e8f0;
-      --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.05); --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.08);
+      --bg-body: #f8fafc;
+      --card-bg: #ffffff;
+      --text-main: #0f172a;
+      --text-muted: #64748b;
+      --accent-cyan: #0284c7;
+      --accent-orange: #f97316;
+      --border-color: #e2e8f0;
+      --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+      --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.08);
     }
+
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Inter', sans-serif; background-color: var(--bg-body); color: var(--text-main); min-height: 100vh; display: flex; flex-direction: column; position: relative; }
-    header { width: 100%; background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border-color); position: sticky; top: 0; z-index: 1000; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
-    .nav-logo img { height: 35px; width: auto; display: block; }
-    nav { display: flex; gap: 1.5rem; }
-    nav a { text-decoration: none; color: var(--text-muted); font-weight: 500; font-size: 0.95rem; transition: color 0.2s ease; }
-    nav a:hover, nav a.active { color: var(--accent-cyan); }
-    .container { max-width: 900px; width: 100%; margin: 0 auto; padding: 4rem 1rem; flex: 1; text-align: left; }
-    h1 { font-size: 2rem; font-weight: 700; color: var(--text-main); margin-bottom: 1rem; }
-    p.intro { color: var(--text-muted); margin-bottom: 2.5rem; line-height: 1.6; }
-    .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-bottom: 2.5rem; }
-    .card { background: var(--card-bg); border: 1px solid var(--border-color); padding: 1.75rem; border-radius: 16px; box-shadow: var(--shadow-sm); }
-    .card-icon { font-size: 2rem; margin-bottom: 1rem; }
-    .card h3 { font-size: 1.1rem; font-weight: 600; color: var(--text-main); margin-bottom: 0.5rem; }
-    .card p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.5; }
-    .btn-marketplace { display: inline-block; padding: 0.75rem 1.5rem; background-color: var(--accent-orange); color: #fff; font-weight: 600; border-radius: 8px; text-decoration: none; transition: opacity 0.2s; }
-    .btn-marketplace:hover { opacity: 0.9; }
-    footer { background: #ffffff; border-top: 1px solid var(--border-color); padding: 2rem 1rem; text-align: center; color: var(--text-muted); font-size: 0.875rem; margin-top: auto; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    .bg-gradient-1 {
+      position: fixed; top: -10%; left: -10%; width: 45vw; height: 45vw;
+      border-radius: 50%; background: radial-gradient(circle, rgba(14, 165, 233, 0.12) 0%, rgba(255, 255, 255, 0) 70%);
+      z-index: -1; pointer-events: none;
+    }
+
+    .bg-gradient-2 {
+      position: fixed; bottom: -10%; right: -10%; width: 50vw; height: 50vw;
+      border-radius: 50%; background: radial-gradient(circle, rgba(249, 115, 22, 0.10) 0%, rgba(255, 255, 255, 0) 70%);
+      z-index: -1; pointer-events: none;
+    }
+
+    /* HEADER & MENU COM PERSONAGEM ANIMADO */
+    header {
+      width: 100%;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 2px solid var(--border-color);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      padding: 0.85rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+    }
+
+    .header-track {
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--accent-cyan), var(--accent-orange), transparent);
+      opacity: 0.3;
+    }
+
+    .funko-walker {
+      position: absolute;
+      bottom: 2px;
+      left: -50px;
+      width: 36px;
+      height: 42px;
+      z-index: 1001;
+      pointer-events: none;
+      animation: walkAcross 18s linear infinite, bobbing 0.4s ease-in-out infinite alternate;
+    }
+
+    @keyframes walkAcross {
+      0% { left: -50px; transform: scaleX(1); }
+      48% { transform: scaleX(1); }
+      50% { left: calc(100% + 10px); transform: scaleX(-1); }
+      98% { transform: scaleX(-1); }
+      100% { left: -50px; transform: scaleX(1); }
+    }
+
+    @keyframes bobbing {
+      0% { transform: translateY(0px); }
+      100% { transform: translateY(-3px); }
+    }
+
+    .nav-logo img {
+      height: 40px;
+      width: auto;
+      display: block;
+      transition: transform 0.2s ease;
+    }
+
+    nav {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--text-main);
+      font-weight: 600;
+      font-size: 1.05rem;
+      padding: 0.5rem 0.75rem;
+      border-radius: 8px;
+      position: relative;
+      transition: all 0.25s ease;
+    }
+
+    nav a:hover {
+      color: var(--accent-cyan);
+      background-color: rgba(2, 132, 199, 0.05);
+    }
+
+    nav a.active {
+      color: var(--accent-cyan);
+      font-weight: 700;
+    }
+
+    nav a.active::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 10%;
+      width: 80%;
+      height: 3px;
+      background: linear-gradient(90deg, var(--accent-cyan), var(--accent-orange));
+      border-radius: 10px;
+    }
+
+    /* CONTEÚDO DA PÁGINA */
+    .container {
+      max-width: 1000px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 3rem 1rem;
+      flex: 1;
+    }
+
+    h1 {
+      font-size: 2.25rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 0.5rem;
+    }
+
+    .subtitle {
+      color: var(--text-muted);
+      font-size: 1.1rem;
+      margin-bottom: 3rem;
+      line-height: 1.5;
+    }
+
+    .category-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin: 2.5rem 0 1.5rem 0;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      border-left: 4px solid var(--accent-cyan);
+      padding-left: 0.75rem;
+    }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .product-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .product-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+      border-color: rgba(2, 132, 199, 0.3);
+    }
+
+    .product-img-container {
+      width: 100%;
+      height: 200px;
+      background: #f1f5f9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .product-img-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .product-info {
+      padding: 1.5rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .product-info h3 {
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--text-main);
+      margin-bottom: 0.5rem;
+    }
+
+    .product-info p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+      margin-bottom: 1.25rem;
+    }
+
+    .btn-buy {
+      display: block;
+      width: 100%;
+      text-align: center;
+      padding: 0.75rem;
+      background-color: var(--accent-orange);
+      color: #fff;
+      font-weight: 600;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+
+    .btn-buy:hover {
+      opacity: 0.9;
+    }
+
+    footer {
+      background: #ffffff;
+      border-top: 1px solid var(--border-color);
+      padding: 2rem 1rem;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.875rem;
+      margin-top: auto;
+    }
+
+    @media (max-width: 768px) {
+      header { padding: 0.8rem 1rem; }
+      nav { gap: 0.75rem; }
+      nav a { font-size: 0.9rem; padding: 0.3rem 0.4rem; }
+      h1 { font-size: 1.75rem; }
+    }
   </style>
 </head>
 <body>
+
+  <div class="bg-gradient-1"></div>
+  <div class="bg-gradient-2"></div>
+
+  <!-- HEADER COM ANIMAÇÃO FUNKO POP -->
   <header>
     <div class="nav-logo">
       <a href="index.html"><img src="logo.png" alt="Pro Imports 3D"></a>
     </div>
+
+    <svg class="funko-walker" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="12" y="6" width="40" height="30" rx="8" fill="#1e293b"/>
+      <path d="M12 14C12 9.58172 15.5817 6 20 6H44C48.4183 6 52 9.58172 52 14V18H12V14Z" fill="#0f172a"/>
+      <circle cx="24" cy="22" r="4" fill="#ffffff"/>
+      <circle cx="40" cy="22" r="4" fill="#ffffff"/>
+      <circle cx="25" cy="21" r="1.5" fill="#0284c7"/>
+      <circle cx="41" cy="21" r="1.5" fill="#0284c7"/>
+      <rect x="24" y="38" width="16" height="14" rx="4" fill="#0284c7"/>
+      <circle cx="25" cy="54" r="3" fill="#f97316"/>
+      <circle cx="39" cy="54" r="3" fill="#f97316"/>
+    </svg>
+
+    <div class="header-track"></div>
+
     <nav>
       <a href="index.html">Início</a>
       <a href="produtos.html" class="active">Produtos</a>
@@ -48,32 +310,105 @@
   </header>
 
   <div class="container">
-    <h1>Catálogo de Produtos</h1>
-    <p class="intro">Explore a nossa linha exclusiva de itens utilitários, decorativos e colecionáveis impressos em 3D com alta precisão.</p>
+    <h1>Catálogo de Produtos & Filamentos</h1>
+    <p class="subtitle">Conheça nossos produtos customizados impressos em 3D e a linha completa de filamentos Masterprint utilizados em nossa produção.</p>
 
-    <div class="features-grid">
-      <div class="card">
-        <div class="card-icon">🔑</div>
-        <h3>Chaveiros Temáticos</h3>
-        <p>Modelos exclusivos inspirados em clássicos automotivos e cultura pop.</p>
+    <!-- SEÇÃO 1: ITENS PERSONALIZADOS DA PRO IMPORTS 3D -->
+    <div class="category-title">🛠️ Criações Exclusivas Pro Imports 3D</div>
+    <div class="products-grid">
+      
+      <div class="product-card">
+        <div class="product-img-container">
+          <!-- Coloque a imagem na pasta img/ e mude o src ex: src="img/chaveiro-gti.jpg" -->
+          <span>Foto do Produto</span>
+        </div>
+        <div class="product-info">
+          <div>
+            <h3>Chaveiros Temáticos Automotivos</h3>
+            <p>Modelos exclusivos detalhados (Linha GTI, Porsche GT3, etc.) impressos com alta definição mecânica.</p>
+          </div>
+          <a href="https://shopee.com.br" target="_blank" class="btn-buy">Ver na Shopee 🛍️</a>
+        </div>
       </div>
-      <div class="card">
-        <div class="card-icon">🏠</div>
-        <h3>Utilidades & Acessórios</h3>
-        <p>Suportes organizadores e itens práticos desenvolvidos para o seu dia a dia.</p>
+
+      <div class="product-card">
+        <div class="product-img-container">
+          <span>Foto do Produto</span>
+        </div>
+        <div class="product-info">
+          <div>
+            <h3>Cortadores de Massa & Biscoito</h3>
+            <p>Produzidos em PETG Masterprint, garantindo segurança alimentar, durabilidade e corte limpo.</p>
+          </div>
+          <a href="https://shopee.com.br" target="_blank" class="btn-buy">Ver na Shopee 🛍️</a>
+        </div>
       </div>
-      <div class="card">
-        <div class="card-icon">🎨</div>
-        <h3>Action Figures & Decor</h3>
-        <p>Peças decorativas e colecionáveis altamente detalhadas em filamento de alta qualidade.</p>
+
+      <div class="product-card">
+        <div class="product-img-container">
+          <span>Foto do Produto</span>
+        </div>
+        <div class="product-info">
+          <div>
+            <h3>Action Figures & Colecionáveis</h3>
+            <p>Peças decorativas e bonecos customizados esculpidos e impressos com precisão em camadas finas.</p>
+          </div>
+          <a href="https://shopee.com.br" target="_blank" class="btn-buy">Ver na Shopee 🛍️</a>
+        </div>
       </div>
+
     </div>
 
-    <a href="https://shopee.com.br" target="_blank" class="btn-marketplace">Visitar Loja na Shopee 🛍️</a>
+    <!-- SEÇÃO 2: FILAMENTOS MASTERPRINT -->
+    <div class="category-title">🧵 Linha de Filamentos Masterprint (1kg)</div>
+    <div class="products-grid">
+
+      <div class="product-card">
+        <div class="product-img-container">
+          <span>Foto Filamento PLA</span>
+        </div>
+        <div class="product-info">
+          <div>
+            <h3>Filamentos PLA Básico & Especial</h3>
+            <p>Excelente estabilidade, cores vivas e acabamento impecável para peças decorativas e protótipos visuais[cite: 6].</p>
+          </div>
+          <a href="https://shopee.com.br" target="_blank" class="btn-buy">Consultar Disponibilidade</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img-container">
+          <span>Foto Filamento PETG</span>
+        </div>
+        <div class="product-info">
+          <div>
+            <h3>Filamentos PETG Masterprint</h3>
+            <p>Alta resistência mecânica, leve flexibilidade e excelente estabilidade térmica para peças funcionais[cite: 21].</p>
+          </div>
+          <a href="https://shopee.com.br" target="_blank" class="btn-buy">Consultar Disponibilidade</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img-container">
+          <span>Foto Filamento Silk / TPU</span>
+        </div>
+        <div class="product-info">
+          <div>
+            <h3>Linhas Silk, Duocolor, TPU e ASA</h3>
+            <p>Efeitos visuais metalizados de alto brilho, filamentos flexíveis e materiais de alto desempenho técnico.</p>
+          </div>
+          <a href="https://shopee.com.br" target="_blank" class="btn-buy">Consultar Disponibilidade</a>
+        </div>
+      </div>
+
+    </div>
+
   </div>
 
   <footer>
     <p>&copy; 2026 Pro Imports 3D. Todos os direitos reservados.</p>
   </footer>
+
 </body>
 </html>
