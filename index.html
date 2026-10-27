@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pro Imports 3D | Início</title>
+  <title>Pro Imports 3D | Site em Construção</title>
   
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="logo.png">
@@ -17,14 +17,11 @@
   <style>
     :root {
       --bg-body: #f8fafc;
-      --card-bg: #ffffff;
       --text-main: #0f172a;
       --text-muted: #64748b;
       --accent-cyan: #0284c7;
       --accent-orange: #f97316;
       --border-color: #e2e8f0;
-      --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-      --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.08);
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -106,10 +103,7 @@
       height: 40px;
       width: auto;
       display: block;
-      transition: transform 0.2s ease;
     }
-
-    .nav-logo img:hover { transform: scale(1.03); }
 
     nav { display: flex; gap: 2rem; align-items: center; }
 
@@ -139,25 +133,26 @@
       border-radius: 10px;
     }
 
-    /* CONTEÚDO PRINCIPAL */
+    /* CONTEÚDO CENTRAL: SITE EM CONSTRUÇÃO & MÁQUINAS ANIMADAS */
     .container {
-      max-width: 900px;
+      max-width: 800px;
       width: 100%;
       margin: 0 auto;
       padding: 4rem 1rem;
       text-align: center;
       flex: 1;
-    }
-
-    .logo-container {
-      margin-bottom: 2rem;
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
     }
 
+    .logo-container {
+      margin-bottom: 2rem;
+    }
+
     .logo-img {
-      max-width: 240px;
+      max-width: 280px;
       width: 100%;
       height: auto;
       display: block;
@@ -165,79 +160,60 @@
       object-fit: contain;
     }
 
-    .badge {
-      display: inline-flex;
+    /* Animação das Máquinas / Engrenagens em Obra */
+    .construction-loader {
+      display: flex;
+      gap: 1.5rem;
       align-items: center;
-      gap: 0.5rem;
-      padding: 0.4rem 1rem;
-      background-color: rgba(2, 132, 199, 0.08);
-      color: var(--accent-cyan);
-      border: 1px solid rgba(2, 132, 199, 0.2);
-      border-radius: 50px;
-      font-size: 0.875rem;
-      font-weight: 600;
-      margin-bottom: 1.5rem;
+      justify-content: center;
+      margin-bottom: 2rem;
     }
 
-    .badge-dot {
-      width: 8px;
-      height: 8px;
-      background-color: var(--accent-cyan);
-      border-radius: 50%;
-      display: inline-block;
-      animation: pulse 2s infinite;
+    .gear {
+      font-size: 2.5rem;
+      animation: spinGear 4s linear infinite;
     }
 
-    @keyframes pulse {
-      0% { transform: scale(0.95); opacity: 0.8; }
-      50% { transform: scale(1.2); opacity: 1; }
-      100% { transform: scale(0.95); opacity: 0.8; }
+    .gear-reverse {
+      font-size: 2rem;
+      animation: spinGearRev 3s linear infinite;
+    }
+
+    .printer-icon {
+      font-size: 3rem;
+      animation: pulsePrinter 1.5s ease-in-out infinite alternate;
+    }
+
+    @keyframes spinGear {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    @keyframes spinGearRev {
+      0% { transform: rotate(360deg); }
+      100% { transform: rotate(0deg); }
+    }
+
+    @keyframes pulsePrinter {
+      0% { transform: scale(1); }
+      100% { transform: scale(1.1); }
     }
 
     h1 {
-      font-size: 2.25rem;
-      font-weight: 700;
-      line-height: 1.25;
+      font-size: 2.5rem;
+      font-weight: 800;
       color: var(--text-main);
-      margin-bottom: 1rem;
+      margin-bottom: 0.75rem;
       letter-spacing: -0.02em;
     }
 
     .subtitle {
-      font-size: 1.125rem;
+      font-size: 1.15rem;
       color: var(--text-muted);
-      margin-bottom: 3rem;
-      max-width: 650px;
-      margin-left: auto;
-      margin-right: auto;
+      max-width: 550px;
+      margin: 0 auto;
       line-height: 1.6;
     }
-
-    .features-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
-      text-align: left;
-    }
-
-    .card {
-      background: var(--card-bg);
-      border: 1px solid var(--border-color);
-      padding: 1.75rem;
-      border-radius: 16px;
-      box-shadow: var(--shadow-sm);
-      transition: all 0.3s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-3px);
-      box-shadow: var(--shadow-lg);
-      border-color: rgba(2, 132, 199, 0.3);
-    }
-
-    .card-icon { font-size: 2rem; margin-bottom: 1rem; }
-    .card h3 { font-size: 1.1rem; font-weight: 600; color: var(--text-main); margin-bottom: 0.5rem; }
-    .card p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 0; }
 
     footer {
       background: #ffffff;
@@ -253,7 +229,7 @@
       header { padding: 0.8rem 1rem; }
       nav { gap: 0.75rem; }
       nav a { font-size: 0.9rem; padding: 0.3rem 0.4rem; }
-      h1 { font-size: 1.75rem; }
+      h1 { font-size: 2rem; }
     }
   </style>
 </head>
@@ -265,7 +241,7 @@
   <!-- HEADER COM MENU E FUNKO POP ANIMADO -->
   <header>
     <div class="nav-logo">
-      <a href="index.html"><img src="logo.png" alt="Pro Imports 3D"></a>
+      <a href="index.html"><img src="logosemfundo.png" alt="Pro Imports 3D"></a>
     </div>
 
     <svg class="funko-walker" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -292,39 +268,22 @@
 
   <div class="container">
     
+    <!-- Logo Sem Fundo -->
     <div class="logo-container">
-      <img src="logo.png" alt="Pro Imports 3D Logo" class="logo-img">
+      <img src="logosemfundo.png" alt="Pro Imports 3D Logo" class="logo-img">
     </div>
 
-    <div class="badge">
-      <span class="badge-dot"></span>
-      Revendedor Oficial Masterprint
+    <!-- Máquinas / Engrenagens Animadas em Obra -->
+    <div class="construction-loader">
+      <span class="gear-reverse">⚙️</span>
+      <span class="printer-icon">🖨️</span>
+      <span class="gear">⚙️</span>
     </div>
 
-    <h1>Soluções de Alta Precisão em Impressão 3D</h1>
+    <h1>Site em Construção</h1>
     <p class="subtitle">
-      Manufatura aditiva especializada, revenda oficial de filamentos Masterprint e projetos personalizados com acabamento refinado.
+      Estamos estruturando uma plataforma completa para trazer o melhor em filamentos e impressões 3D. Em breve novidades por aqui!
     </p>
-
-    <div class="features-grid">
-      <div class="card">
-        <div class="card-icon">🧵</div>
-        <h3>Filamentos Masterprint</h3>
-        <p>Revenda oficial com suporte comercial e variedade em PLA, PETG, ABS, TPU e ASA para sua produção.</p>
-      </div>
-
-      <div class="card">
-        <div class="card-icon">⚙️</div>
-        <h3>Impressões Sob Medida</h3>
-        <p>Desenvolvimento exclusivo de chaveiros automotivos, utilidades residenciais e colecionáveis detalhados.</p>
-      </div>
-
-      <div class="card">
-        <div class="card-icon">🚀</div>
-        <h3>Envio Rápido & Seguro</h3>
-        <p>Atendimento integrado às principais plataformas com logística ágil para todo o Brasil.</p>
-      </div>
-    </div>
 
   </div>
 
