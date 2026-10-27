@@ -143,7 +143,7 @@
     .brand-nav {
       display: flex;
       gap: 1rem;
-      margin-bottom: 3rem;
+      margin-bottom: 2.5rem;
       flex-wrap: wrap;
     }
 
@@ -170,6 +170,31 @@
       box-shadow: var(--shadow-lg);
     }
 
+    /* SUBMENUS DE MATERIAIS MASTERPRINT */
+    .sub-nav {
+      display: flex;
+      gap: 0.75rem;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .sub-btn {
+      text-decoration: none;
+      padding: 0.4rem 1rem;
+      background: rgba(2, 132, 199, 0.08);
+      border: 1px solid rgba(2, 132, 199, 0.2);
+      border-radius: 20px;
+      color: var(--accent-cyan);
+      font-weight: 600;
+      font-size: 0.85rem;
+      transition: all 0.2s ease;
+    }
+
+    .sub-btn:hover {
+      background: var(--accent-cyan);
+      color: #ffffff;
+    }
+
     .brand-section {
       padding-top: 2rem;
       margin-bottom: 3.5rem;
@@ -179,7 +204,7 @@
       font-size: 1.6rem;
       font-weight: 700;
       color: var(--text-main);
-      margin-bottom: 1.5rem;
+      margin-bottom: 1rem;
       display: flex;
       align-items: center;
       gap: 1rem;
@@ -187,7 +212,7 @@
       padding-left: 0.75rem;
     }
 
-    /* PADRÃO ÚNICO PARA OS LOGOS */
+    /* PADRÃO ÚNICO PARA OS LOGOS DAS OUTRAS MARCAS */
     .brand-logo {
       height: 38px;
       width: auto;
@@ -202,6 +227,7 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 1.5rem;
+      margin-bottom: 2rem;
     }
 
     .product-card {
@@ -326,58 +352,118 @@
     <h1>Catálogo de Filamentos</h1>
     <p class="subtitle">Selecione a marca desejada abaixo para visualizar os suprimentos disponíveis:</p>
 
-    <!-- NAVEGAÇÃO DE MARCAS -->
+    <!-- NAVEGAÇÃO PRINCIPAL DE MARCAS -->
     <div class="brand-nav">
       <a href="#masterprint" class="brand-btn">🧵 Masterprint</a>
       <a href="#voolt3d" class="brand-btn">⚡ Voolt3D</a>
       <a href="#sunlu" class="brand-btn">🌐 Sunlu</a>
     </div>
 
-    <!-- SEÇÃO 1: MASTERPRINT -->
+    <!-- SEÇÃO 1: MASTERPRINT COM SUBMENUS DE MATERIAIS -->
     <section id="masterprint" class="brand-section">
       <div class="category-title">
-        <img src="logo/masterprint.png" alt="Masterprint" class="brand-logo">
-        <span>(Revenda Oficial)</span>
+        <span>Masterprint</span>
       </div>
-      <div class="products-grid">
 
-        <div class="product-card">
-          <div class="product-img-container"><span>Foto PETG Masterprint</span></div>
-          <div class="product-info">
-            <div>
-              <span class="badge-brand">Masterprint</span>
-              <h3>PETG Básico & Especial</h3>
-              <p>Resistência mecânica superior, leve flexibilidade e estabilidade para peças funcionais[cite: 21].</p>
-            </div>
-            <a href="https://shopee.com.br" target="_blank" class="btn-buy">Comprar na Shopee 🛍️</a>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <div class="product-img-container"><span>Foto PLA Masterprint</span></div>
-          <div class="product-info">
-            <div>
-              <span class="badge-brand">Masterprint</span>
-              <h3>PLA (Básico, Fosco & Silk)</h3>
-              <p>Acabamento impecável, cores vivas e alta definição para protótipos e peças decorativas[cite: 6].</p>
-            </div>
-            <a href="https://shopee.com.br" target="_blank" class="btn-buy">Comprar na Shopee 🛍️</a>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <div class="product-img-container"><span>Foto Técnicos Masterprint</span></div>
-          <div class="product-info">
-            <div>
-              <span class="badge-brand">Masterprint</span>
-              <h3>Linhas Técnicas (ABS, TPU & ASA)</h3>
-              <p>Desempenho industrial, flexibilidade em TPU e proteção contra raios UV com ASA[cite: 27, 31].</p>
-            </div>
-            <a href="https://shopee.com.br" target="_blank" class="btn-buy">Comprar na Shopee 🛍️</a>
-          </div>
-        </div>
-
+      <!-- Submenu de Materiais Masterprint -->
+      <div class="sub-nav">
+        <a href="#pla" class="sub-btn">PLA</a>
+        <a href="#petg" class="sub-btn">PETG</a>
+        <a href="#abs" class="sub-btn">ABS</a>
+        <a href="#tpu" class="sub-btn">TPU</a>
+        <a href="#asa" class="sub-btn">ASA</a>
       </div>
+
+      <!-- Bloco PLA -->
+      <div id="pla" style="padding-top: 1rem; margin-bottom: 2rem;">
+        <h3 style="font-size: 1.25rem; margin-bottom: 1rem; color: var(--text-main);">🔹 Masterprint PLA</h3>
+        <div class="products-grid">
+          <div class="product-card">
+            <div class="product-img-container"><span>Foto PLA Masterprint</span></div>
+            <div class="product-info">
+              <div>
+                <span class="badge-brand">Masterprint</span>
+                <h3>PLA (Básico, Fosco & Silk)</h3>
+                <p>Acabamento impecável, cores vivas e alta definição para protótipos e peças decorativas[cite: 6].</p>
+              </div>
+              <a href="https://shopee.com.br" target="_blank" class="btn-buy">Comprar na Shopee 🛍️</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bloco PETG -->
+      <div id="petg" style="padding-top: 1rem; margin-bottom: 2rem;">
+        <h3 style="font-size: 1.25rem; margin-bottom: 1rem; color: var(--text-main);">🔹 Masterprint PETG</h3>
+        <div class="products-grid">
+          <div class="product-card">
+            <div class="product-img-container"><span>Foto PETG Masterprint</span></div>
+            <div class="product-info">
+              <div>
+                <span class="badge-brand">Masterprint</span>
+                <h3>PETG Básico & Especial</h3>
+                <p>Resistência mecânica superior, leve flexibilidade e estabilidade para peças funcionais[cite: 21].</p>
+              </div>
+              <a href="https://shopee.com.br" target="_blank" class="btn-buy">Comprar na Shopee 🛍️</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bloco ABS -->
+      <div id="abs" style="padding-top: 1rem; margin-bottom: 2rem;">
+        <h3 style="font-size: 1.25rem; margin-bottom: 1rem; color: var(--text-main);">🔹 Masterprint ABS</h3>
+        <div class="products-grid">
+          <div class="product-card">
+            <div class="product-img-container"><span>Foto ABS Masterprint</span></div>
+            <div class="product-info">
+              <div>
+                <span class="badge-brand">Masterprint</span>
+                <h3>ABS Básico Industrial</h3>
+                <p>Desempenho industrial, rigidez e excelente resistência térmica[cite: 27].</p>
+              </div>
+              <a href="https://shopee.com.br" target="_blank" class="btn-buy">Comprar na Shopee 🛍️</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bloco TPU -->
+      <div id="tpu" style="padding-top: 1rem; margin-bottom: 2rem;">
+        <h3 style="font-size: 1.25rem; margin-bottom: 1rem; color: var(--text-main);">🔹 Masterprint TPU</h3>
+        <div class="products-grid">
+          <div class="product-card">
+            <div class="product-img-container"><span>Foto TPU Masterprint</span></div>
+            <div class="product-info">
+              <div>
+                <span class="badge-brand">Masterprint</span>
+                <h3>TPU Flexível</h3>
+                <p>Alta elasticidade, toque emborrachado e durabilidade para peças funcionais[cite: 31].</p>
+              </div>
+              <a href="https://shopee.com.br" target="_blank" class="btn-buy">Comprar na Shopee 🛍️</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bloco ASA -->
+      <div id="asa" style="padding-top: 1rem; margin-bottom: 2rem;">
+        <h3 style="font-size: 1.25rem; margin-bottom: 1rem; color: var(--text-main);">🔹 Masterprint ASA</h3>
+        <div class="products-grid">
+          <div class="product-card">
+            <div class="product-img-container"><span>Foto ASA Masterprint</span></div>
+            <div class="product-info">
+              <div>
+                <span class="badge-brand">Masterprint</span>
+                <h3>ASA Premium UV</h3>
+                <p>Máxima resistência contra raios solares e intempéries para uso externo.</p>
+              </div>
+              <a href="https://shopee.com.br" target="_blank" class="btn-buy">Comprar na Shopee 🛍️</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </section>
 
     <!-- SEÇÃO 2: VOOLT3D (EM BREVE) -->
