@@ -139,7 +139,7 @@
     h1 { font-size: 2.25rem; font-weight: 700; color: var(--text-main); margin-bottom: 0.5rem; }
     .subtitle { color: var(--text-muted); font-size: 1.1rem; margin-bottom: 2rem; line-height: 1.5; }
 
-    /* FILTRO / NAVEGAÇÃO DE MARCAS */
+    /* NAVEGAÇÃO DE MARCAS */
     .brand-nav {
       display: flex;
       gap: 1rem;
@@ -170,7 +170,6 @@
       box-shadow: var(--shadow-lg);
     }
 
-    /* TÍTULOS DAS SEÇÕES */
     .brand-section {
       padding-top: 2rem;
       margin-bottom: 3.5rem;
@@ -183,9 +182,19 @@
       margin-bottom: 1.5rem;
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      gap: 1rem;
       border-left: 4px solid var(--accent-cyan);
       padding-left: 0.75rem;
+    }
+
+    /* PADRÃO ÚNICO PARA OS LOGOS */
+    .brand-logo {
+      height: 38px;
+      width: auto;
+      max-width: 140px;
+      object-fit: contain;
+      display: inline-block;
+      vertical-align: middle;
     }
 
     /* GRIDS E CARDS */
@@ -317,17 +326,18 @@
     <h1>Catálogo de Filamentos</h1>
     <p class="subtitle">Selecione a marca desejada abaixo para visualizar os suprimentos disponíveis:</p>
 
-    <!-- NAVEGAÇÃO DE MARCAS (ÂNCTORAS DENTRO DA PÁGINA) -->
+    <!-- NAVEGAÇÃO DE MARCAS -->
     <div class="brand-nav">
       <a href="#masterprint" class="brand-btn">🧵 Masterprint</a>
       <a href="#voolt3d" class="brand-btn">⚡ Voolt3D</a>
       <a href="#sunlu" class="brand-btn">🌐 Sunlu</a>
     </div>
 
-    <!-- SEÇÃO 1: MASTERPRINT (REVENDEDOR AUTORIZADO) -->
+    <!-- SEÇÃO 1: MASTERPRINT -->
     <section id="masterprint" class="brand-section">
       <div class="category-title">
-        <span>🧵 Masterprint (Revenda Oficial)</span>
+        <img src="logo/masterprint.png" alt="Masterprint" class="brand-logo">
+        <span>(Revenda Oficial)</span>
       </div>
       <div class="products-grid">
 
@@ -361,7 +371,7 @@
             <div>
               <span class="badge-brand">Masterprint</span>
               <h3>Linhas Técnicas (ABS, TPU & ASA)</h3>
-              <p>Desempenho industrial, flexibilidade em TPU e proteção contra raios UV com ASA[cite: 27, 31, 32].</p>
+              <p>Desempenho industrial, flexibilidade em TPU e proteção contra raios UV com ASA[cite: 27, 31].</p>
             </div>
             <a href="https://shopee.com.br" target="_blank" class="btn-buy">Comprar na Shopee 🛍️</a>
           </div>
@@ -373,7 +383,7 @@
     <!-- SEÇÃO 2: VOOLT3D (EM BREVE) -->
     <section id="voolt3d" class="brand-section">
       <div class="category-title">
-        <span>⚡ Voolt3D</span>
+        <img src="logo/voolt3d.png" alt="Voolt3D" class="brand-logo">
       </div>
       <div class="coming-soon-card">
         <span class="badge-soon">Em Breve</span>
@@ -385,7 +395,7 @@
     <!-- SEÇÃO 3: SUNLU (EM BREVE) -->
     <section id="sunlu" class="brand-section">
       <div class="category-title">
-        <span>🌐 Sunlu</span>
+        <img src="logo/sunlu.png" alt="Sunlu" class="brand-logo">
       </div>
       <div class="coming-soon-card">
         <span class="badge-soon">Em Breve</span>
