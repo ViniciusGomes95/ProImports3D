@@ -82,7 +82,6 @@
 
     .nav-logo img { height: 40px; width: auto; display: block; }
     
-    /* BLOCO DA DIREITA: PESQUISA + ABAS NA MESMA LINHA */
     .header-right { display: flex; align-items: center; gap: 1.5rem; }
 
     nav { display: flex; gap: 1rem; align-items: center; }
@@ -97,7 +96,6 @@
       background: linear-gradient(90deg, var(--accent-cyan), var(--accent-orange)); border-radius: 10px;
     }
 
-    /* BARRA DE PESQUISA ALINHADA COM AS ABAS */
     .search-box { position: relative; display: flex; align-items: center; }
     .search-input {
       padding: 0.45rem 1rem 0.45rem 2.2rem; border: 1px solid var(--border-color);
@@ -128,12 +126,10 @@
     }
     .search-item-empty { padding: 0.85rem; text-align: center; font-size: 0.85rem; color: var(--text-muted); }
 
-    /* CONTEÚDO PRINCIPAL */
     .container { max-width: 1140px; width: 100%; margin: 0 auto; padding: 3rem 1rem; flex: 1; }
     h1 { font-size: 2.25rem; font-weight: 800; color: var(--text-main); margin-bottom: 0.5rem; }
     .subtitle { color: var(--text-muted); font-size: 1.1rem; margin-bottom: 2rem; line-height: 1.5; }
 
-    /* SUBMENU FIXO E ADESIVO (STICKY) */
     .sub-nav {
       display: flex; gap: 0.75rem; margin-bottom: 2.5rem; flex-wrap: wrap;
       background: rgba(255, 255, 255, 0.95); padding: 0.75rem 1.25rem; border-radius: 40px;
@@ -157,7 +153,6 @@
       display: flex; align-items: center; gap: 0.75rem; border-left: 4px solid var(--accent-cyan); padding-left: 0.75rem;
     }
 
-    /* GRID DE PRODUTOS LADO A LADO (3 COLUNAS) */
     .products-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -179,20 +174,8 @@
       width: 100%; height: 100%; object-fit: contain; padding: 0.5rem;
     }
 
-    .product-info { padding: 1.25rem; flex: 1; display: flex; flex-direction: column; justify-content: space-between; }
-    .product-info h3 { font-size: 1.1rem; font-weight: 700; color: var(--text-main); margin-bottom: 0.4rem; line-height: 1.3; }
-    .product-info p { font-size: 0.875rem; color: var(--text-muted); line-height: 1.4; margin-bottom: 1.25rem; }
-
-    .badge-brand {
-      display: inline-block; padding: 0.2rem 0.6rem; background: rgba(2, 132, 199, 0.1);
-      color: var(--accent-cyan); font-size: 0.75rem; font-weight: 700; border-radius: 4px; margin-bottom: 0.5rem; text-transform: uppercase;
-    }
-
-    .btn-buy {
-      display: block; width: 100%; text-align: center; padding: 0.7rem; background-color: var(--accent-orange);
-      color: #fff; font-weight: 700; font-size: 0.9rem; border-radius: 8px; text-decoration: none; transition: opacity 0.2s;
-    }
-    .btn-buy:hover { opacity: 0.9; }
+    .product-info { padding: 1.25rem; flex: 1; display: flex; flex-direction: column; justify-content: center; }
+    .product-info h3 { font-size: 1.15rem; font-weight: 700; color: var(--text-main); margin-bottom: 0; line-height: 1.3; }
 
     footer {
       background: #ffffff; border-top: 1px solid var(--border-color); padding: 2rem 1rem;
@@ -239,7 +222,6 @@
       </svg>
 
       <div class="header-right">
-        <!-- BARRA DE PESQUISA ALINHADA NA MESMA LINHA DAS ABAS -->
         <div class="search-box">
           <span class="search-icon">🔍</span>
           <input type="text" id="searchInput" class="search-input" placeholder="Buscar cor ou material..." onkeyup="executarBuscaGlobal()">
@@ -261,7 +243,6 @@
     <h1>Catálogo de Filamentos Masterprint</h1>
     <p class="subtitle">Selecione o tipo de material desejado para navegar pelas categorias:</p>
 
-    <!-- SUBMENU FIXO E ADESIVO (STICKY) -->
     <div class="sub-nav">
       <a href="#pla" class="sub-btn">PLA</a>
       <a href="#petg" class="sub-btn">PETG</a>
@@ -279,204 +260,119 @@
         <div class="product-card">
           <div class="product-img-container"><span>Foto PLA Azul</span></div>
           <div class="product-info">
-            <div>
-              <span class="badge-brand">Masterprint</span>
-              <h3>PLA Básico Azul 1kg</h3>
-              <p>Cód. 231010003 - Azul vibrante com alta definição e acabamento impecável.</p>
-            </div>
-            <a href="https://shopee.com.br" target="_blank" class="btn-buy">Comprar na Shopee 🛍️</a>
+            <h3>PLA Azul</h3>
           </div>
         </div>
 
         <div class="product-card">
           <div class="product-img-container"><span>Foto PLA Vermelho</span></div>
           <div class="product-info">
-            <div>
-              <span class="badge-brand">Masterprint</span>
-              <h3>PLA Básico Vermelho 1kg</h3>
-              <p>Cód. 231010005 - Vermelho clássico de alta qualidade e cores vivas.</p>
-            </div>
-            <a href="https://shopee.com.br" target="_blank" class="btn-buy">Comprar na Shopee 🛍️</a>
+            <h3>PLA Vermelho</h3>
           </div>
         </div>
 
         <div class="product-card">
           <div class="product-img-container"><span>Foto PLA Cinza</span></div>
           <div class="product-info">
-            <div>
-              <span class="badge-brand">Masterprint</span>
-              <h3>PLA Básico Cinza 1kg</h3>
-              <p>Cód. 231010004 - Cinza neutro ideal para protótipos e peças técnicas.</p>
-            </div>
-            <a href="https://shopee.com.br" target="_blank" class="btn-buy">Comprar na Shopee 🛍️</a>
+            <h3>PLA Cinza</h3>
           </div>
         </div>
 
         <div class="product-card">
           <div class="product-img-container"><span>Foto PLA Verde</span></div>
           <div class="product-info">
-            <div>
-              <span class="badge-brand">Masterprint</span>
-              <h3>PLA Básico Verde 1kg</h3>
-              <p>Cód. 231010006 - Verde brilhante com excelente aderência entre camadas.</p>
-            </div>
-            <a href="https://shopee.com.br" target="_blank" class="btn-buy">Comprar na Shopee 🛍️</a>
+            <h3>PLA Verde</h3>
           </div>
         </div>
 
         <div class="product-card">
           <div class="product-img-container"><span>Foto PLA Dourado</span></div>
           <div class="product-info">
-            <div>
-              <span class="badge-brand">Masterprint</span>
-              <h3>PLA Básico Dourado 1kg</h3>
-              <p>Cód. 231010007 - Tom dourado elegante para peças decorativas.</p>
-            </div>
-            <a href="https://shopee.com.br" target="_blank" class="btn-buy">Comprar na Shopee 🛍️</a>
+            <h3>PLA Dourado</h3>
           </div>
         </div>
 
         <div class="product-card">
           <div class="product-img-container"><span>Foto PLA Madeira</span></div>
           <div class="product-info">
-            <div>
-              <span class="badge-brand">Masterprint</span>
-              <h3>PLA Básico Madeira 1kg</h3>
-              <p>Cód. 231010008 - Textura exclusiva com tom amadeirado.</p>
-            </div>
-            <a href="https://shopee.com.br" target="_blank" class="btn-buy">Comprar na Shopee 🛍️</a>
+            <h3>PLA Madeira</h3>
           </div>
         </div>
 
         <div class="product-card">
           <div class="product-img-container"><span>Foto PLA Amarelo</span></div>
           <div class="product-info">
-            <div>
-              <span class="badge-brand">Masterprint</span>
-              <h3>PLA Básico Amarelo 1kg</h3>
-              <p>Cód. 231010009 - Amarelo vivo com excelente definição visual.</p>
-            </div>
-            <a href="https://shopee.com.br" target="_blank" class="btn-buy">Comprar na Shopee 🛍️</a>
+            <h3>PLA Amarelo</h3>
           </div>
         </div>
 
         <div class="product-card">
           <div class="product-img-container"><span>Foto PLA Branco</span></div>
           <div class="product-info">
-            <div>
-              <span class="badge-brand">Masterprint</span>
-              <h3>PLA Básico Branco 1kg</h3>
-              <p>Cód. 231010019 - Branco puro universal para qualquer projeto.</p>
-            </div>
-            <a href="https://shopee.com.br" target="_blank" class="btn-buy">Comprar na Shopee 🛍️</a>
+            <h3>PLA Branco</h3>
           </div>
         </div>
 
         <div class="product-card">
           <div class="product-img-container"><span>Foto PLA Rosa</span></div>
           <div class="product-info">
-            <div>
-              <span class="badge-brand">Masterprint</span>
-              <h3>PLA Básico Rosa 1kg</h3>
-              <p>Cód. 231010020 - Tom rosa vibrante e acabamento impecável.</p>
-            </div>
-            <a href="https://shopee.com.br" target="_blank" class="btn-buy">Comprar na Shopee 🛍️</a>
+            <h3>PLA Rosa</h3>
           </div>
         </div>
 
         <div class="product-card">
           <div class="product-img-container"><span>Foto PLA Azul Escuro</span></div>
           <div class="product-info">
-            <div>
-              <span class="badge-brand">Masterprint</span>
-              <h3>PLA Básico Azul Escuro 1kg</h3>
-              <p>Cód. 231010021 - Azul marinho sólido de alto desempenho.</p>
-            </div>
-            <a href="https://shopee.com.br" target="_blank" class="btn-buy">Comprar na Shopee 🛍️</a>
+            <h3>PLA Azul Escuro</h3>
           </div>
         </div>
 
         <div class="product-card">
           <div class="product-img-container"><span>Foto PLA Prata</span></div>
           <div class="product-info">
-            <div>
-              <span class="badge-brand">Masterprint</span>
-              <h3>PLA Básico Prata 1kg</h3>
-              <p>Cód. 231010022 - Efeito prata clássico para peças metálicas.</p>
-            </div>
-            <a href="https://shopee.com.br" target="_blank" class="btn-buy">Comprar na Shopee 🛍️</a>
+            <h3>PLA Prata</h3>
           </div>
         </div>
 
         <div class="product-card">
           <div class="product-img-container"><span>Foto PLA Laranja</span></div>
           <div class="product-info">
-            <div>
-              <span class="badge-brand">Masterprint</span>
-              <h3>PLA Básico Laranja 1kg</h3>
-              <p>Cód. 231010023 - Laranja chamativo e sólido para destaque visual.</p>
-            </div>
-            <a href="https://shopee.com.br" target="_blank" class="btn-buy">Comprar na Shopee 🛍️</a>
+            <h3>PLA Laranja</h3>
           </div>
         </div>
 
         <div class="product-card">
           <div class="product-img-container"><span>Foto PLA Preto</span></div>
           <div class="product-info">
-            <div>
-              <span class="badge-brand">Masterprint</span>
-              <h3>PLA Básico Preto 1kg</h3>
-              <p>Cód. 231010026 - Preto absoluto padrão para uso geral.</p>
-            </div>
-            <a href="https://shopee.com.br" target="_blank" class="btn-buy">Comprar na Shopee 🛍️</a>
+            <h3>PLA Preto</h3>
           </div>
         </div>
 
         <div class="product-card">
           <div class="product-img-container"><span>Foto PLA Silk Bronze</span></div>
           <div class="product-info">
-            <div>
-              <span class="badge-brand">Masterprint</span>
-              <h3>PLA Silk Bronze 1kg</h3>
-              <p>Cód. 231010036 - Efeito metálico silk bronze de alto brilho.</p>
-            </div>
-            <a href="https://shopee.com.br" target="_blank" class="btn-buy">Comprar na Shopee 🛍️</a>
+            <h3>PLA Silk Bronze</h3>
           </div>
         </div>
 
         <div class="product-card">
           <div class="product-img-container"><span>Foto PLA Silk Prata</span></div>
           <div class="product-info">
-            <div>
-              <span class="badge-brand">Masterprint</span>
-              <h3>PLA Silk Prata 1kg</h3>
-              <p>Cód. 231010037 - Efeito metálico silk prata acetinado.</p>
-            </div>
-            <a href="https://shopee.com.br" target="_blank" class="btn-buy">Comprar na Shopee 🛍️</a>
+            <h3>PLA Silk Prata</h3>
           </div>
         </div>
 
         <div class="product-card">
           <div class="product-img-container"><span>Foto PLA Silk Ouro</span></div>
           <div class="product-info">
-            <div>
-              <span class="badge-brand">Masterprint</span>
-              <h3>PLA Silk Ouro 1kg</h3>
-              <p>Cód. 231010038 - Efeito silk ouro brilhante de alto impacto.</p>
-            </div>
-            <a href="https://shopee.com.br" target="_blank" class="btn-buy">Comprar na Shopee 🛍️</a>
+            <h3>PLA Silk Ouro</h3>
           </div>
         </div>
 
         <div class="product-card">
           <div class="product-img-container"><span>Foto PLA Fosco Preto</span></div>
           <div class="product-info">
-            <div>
-              <span class="badge-brand">Masterprint</span>
-              <h3>PLA Fosco Preto Carbono 1kg</h3>
-              <p>Cód. 231010105 - Acabamento matte profissional que esconde as camadas.</p>
-            </div>
-            <a href="https://shopee.com.br" target="_blank" class="btn-buy">Comprar na Shopee 🛍️</a>
+            <h3>PLA Fosco Preto Carbono</h3>
           </div>
         </div>
       </div>
@@ -491,84 +387,49 @@
         <div class="product-card">
           <div class="product-img-container"><span>Foto PETG Preto</span></div>
           <div class="product-info">
-            <div>
-              <span class="badge-brand">Masterprint</span>
-              <h3>PETG Básico Preto 1kg</h3>
-              <p>Cód. 231020001 - Resistência mecânica superior e durabilidade em preto.</p>
-            </div>
-            <a href="https://shopee.com.br" target="_blank" class="btn-buy">Comprar na Shopee 🛍️</a>
+            <h3>PETG Preto</h3>
           </div>
         </div>
 
         <div class="product-card">
           <div class="product-img-container"><span>Foto PETG Branco</span></div>
           <div class="product-info">
-            <div>
-              <span class="badge-brand">Masterprint</span>
-              <h3>PETG Básico Branco 1kg</h3>
-              <p>Cód. 231020002 - Branco funcional de alta estabilidade e resistência.</p>
-            </div>
-            <a href="https://shopee.com.br" target="_blank" class="btn-buy">Comprar na Shopee 🛍️</a>
+            <h3>PETG Branco</h3>
           </div>
         </div>
 
         <div class="product-card">
           <div class="product-img-container"><span>Foto PETG Azul</span></div>
           <div class="product-info">
-            <div>
-              <span class="badge-brand">Masterprint</span>
-              <h3>PETG Básico Azul 1kg</h3>
-              <p>Cód. 231020003 - PETG Azul resistente para peças técnicas.</p>
-            </div>
-            <a href="https://shopee.com.br" target="_blank" class="btn-buy">Comprar na Shopee 🛍️</a>
+            <h3>PETG Azul</h3>
           </div>
         </div>
 
         <div class="product-card">
           <div class="product-img-container"><span>Foto PETG Verde</span></div>
           <div class="product-info">
-            <div>
-              <span class="badge-brand">Masterprint</span>
-              <h3>PETG Básico Verde 1kg</h3>
-              <p>Cód. 231020004 - PETG Verde vibrante para aplicações exigentes.</p>
-            </div>
-            <a href="https://shopee.com.br" target="_blank" class="btn-buy">Comprar na Shopee 🛍️</a>
+            <h3>PETG Verde</h3>
           </div>
         </div>
 
         <div class="product-card">
           <div class="product-img-container"><span>Foto PETG Translúcido Amarelo</span></div>
           <div class="product-info">
-            <div>
-              <span class="badge-brand">Masterprint</span>
-              <h3>PETG Translúcido Amarelo 1kg</h3>
-              <p>Cód. 231020006 - Visual cristalino e translúcido em tom amarelo.</p>
-            </div>
-            <a href="https://shopee.com.br" target="_blank" class="btn-buy">Comprar na Shopee 🛍️</a>
+            <h3>PETG Translúcido Amarelo</h3>
           </div>
         </div>
 
         <div class="product-card">
           <div class="product-img-container"><span>Foto PETG Translúcido Azul</span></div>
           <div class="product-info">
-            <div>
-              <span class="badge-brand">Masterprint</span>
-              <h3>PETG Translúcido Azul 1kg</h3>
-              <p>Cód. 231020007 - Visual cristalino e translúcido em tom azul.</p>
-            </div>
-            <a href="https://shopee.com.br" target="_blank" class="btn-buy">Comprar na Shopee 🛍️</a>
+            <h3>PETG Translúcido Azul</h3>
           </div>
         </div>
 
         <div class="product-card">
           <div class="product-img-container"><span>Foto PETG Fibra de Carbono</span></div>
           <div class="product-info">
-            <div>
-              <span class="badge-brand">Masterprint</span>
-              <h3>PETG Fibra de Carbono 1kg</h3>
-              <p>Cód. 231020031 - Altíssima rigidez técnica e leveza estrutural.</p>
-            </div>
-            <a href="https://shopee.com.br" target="_blank" class="btn-buy">Comprar na Shopee 🛍️</a>
+            <h3>PETG Fibra de Carbono</h3>
           </div>
         </div>
       </div>
@@ -583,24 +444,14 @@
         <div class="product-card">
           <div class="product-img-container"><span>Foto ABS Preto</span></div>
           <div class="product-info">
-            <div>
-              <span class="badge-brand">Masterprint</span>
-              <h3>ABS Básico Preto 1kg</h3>
-              <p>Cód. 231030001 - Desempenho industrial, rigidez e resistência térmica.</p>
-            </div>
-            <a href="https://shopee.com.br" target="_blank" class="btn-buy">Comprar na Shopee 🛍️</a>
+            <h3>ABS Preto</h3>
           </div>
         </div>
 
         <div class="product-card">
           <div class="product-img-container"><span>Foto ABS Branco</span></div>
           <div class="product-info">
-            <div>
-              <span class="badge-brand">Masterprint</span>
-              <h3>ABS Básico Branco 1kg</h3>
-              <p>Cód. 231030002 - Branco ideal para pós-processamento e pintura.</p>
-            </div>
-            <a href="https://shopee.com.br" target="_blank" class="btn-buy">Comprar na Shopee 🛍️</a>
+            <h3>ABS Branco</h3>
           </div>
         </div>
       </div>
@@ -615,24 +466,14 @@
         <div class="product-card">
           <div class="product-img-container"><span>Foto TPU Preto</span></div>
           <div class="product-info">
-            <div>
-              <span class="badge-brand">Masterprint</span>
-              <h3>TPU Flexível Preto 1kg</h3>
-              <p>Cód. 231050001 - Toque emborrachado, alta elasticidade e absorção de impacto.</p>
-            </div>
-            <a href="https://shopee.com.br" target="_blank" class="btn-buy">Comprar na Shopee 🛍️</a>
+            <h3>TPU Flexível Preto</h3>
           </div>
         </div>
 
         <div class="product-card">
           <div class="product-img-container"><span>Foto TPU Branco</span></div>
           <div class="product-info">
-            <div>
-              <span class="badge-brand">Masterprint</span>
-              <h3>TPU Flexível Branco 1kg</h3>
-              <p>Cód. 231050002 - TPU flexível em tom branco de excelente desempenho.</p>
-            </div>
-            <a href="https://shopee.com.br" target="_blank" class="btn-buy">Comprar na Shopee 🛍️</a>
+            <h3>TPU Flexível Branco</h3>
           </div>
         </div>
       </div>
@@ -647,24 +488,14 @@
         <div class="product-card">
           <div class="product-img-container"><span>Foto ASA Preto</span></div>
           <div class="product-info">
-            <div>
-              <span class="badge-brand">Masterprint</span>
-              <h3>ASA UV Preto 1kg</h3>
-              <p>Cód. 231060001 - Resistência máxima a raios ultravioleta e intempéries externas.</p>
-            </div>
-            <a href="https://shopee.com.br" target="_blank" class="btn-buy">Comprar na Shopee 🛍️</a>
+            <h3>ASA UV Preto</h3>
           </div>
         </div>
 
         <div class="product-card">
           <div class="product-img-container"><span>Foto ASA Branco</span></div>
           <div class="product-info">
-            <div>
-              <span class="badge-brand">Masterprint</span>
-              <h3>ASA UV Branco 1kg</h3>
-              <p>Cód. 231060002 - Proteção solar externa sem amarelar ao longo do tempo.</p>
-            </div>
-            <a href="https://shopee.com.br" target="_blank" class="btn-buy">Comprar na Shopee 🛍️</a>
+            <h3>ASA UV Branco</h3>
           </div>
         </div>
       </div>
