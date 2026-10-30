@@ -1,32 +1,369 @@
 [
+  // =========================================================================
+  // 1. CATÁLOGO COMPLETO - MASTERPRINT PLA BÁSICO & ESPECIAL
+  // =========================================================================
   {
-    "id": "petg-masterprint-verde",
-    "nome": "Filamento PETG Verde Masterprint 1kg",
-    "categoria": "Filamentos",
-    "marca": "Masterprint",
-    "material": "PETG",
-    "descricao": "Alta resistência mecânica e durabilidade.",
-    "link_shopee": "https://shopee.com.br",
-    "ancora": "filamentos.html#petg"
-  },
-  {
-    "id": "pla-masterprint-silk-ouro",
-    "nome": "Filamento PLA Silk Ouro Masterprint 1kg",
+    "id": "231010003",
+    "nome": "Filamento PLA Básico Azul Masterprint 1kg",
     "categoria": "Filamentos",
     "marca": "Masterprint",
     "material": "PLA",
-    "descricao": "Acabamento brilhante e impecável.",
+    "descricao": "Cód. 231010003 - Azul vibrante com alta definição.",
     "link_shopee": "https://shopee.com.br",
     "ancora": "filamentos.html#pla"
   },
   {
-    "id": "chaveiro-gol-gti",
-    "nome": "Chaveiro Temático Gol GTI 3D",
+    "id": "231010005",
+    "nome": "Filamento PLA Básico Vermelho Masterprint 1kg",
+    "categoria": "Filamentos",
+    "marca": "Masterprint",
+    "material": "PLA",
+    "descricao": "Cód. 231010005 - Vermelho clássico de alta qualidade.",
+    "link_shopee": "https://shopee.com.br",
+    "ancora": "filamentos.html#pla"
+  },
+  {
+    "id": "231010004",
+    "nome": "Filamento PLA Básico Cinza Masterprint 1kg",
+    "categoria": "Filamentos",
+    "marca": "Masterprint",
+    "material": "PLA",
+    "descricao": "Cód. 231010004 - Cinza neutro para protótipos e peças técnicas.",
+    "link_shopee": "https://shopee.com.br",
+    "ancora": "filamentos.html#pla"
+  },
+  {
+    "id": "231010006",
+    "nome": "Filamento PLA Básico Verde Masterprint 1kg",
+    "categoria": "Filamentos",
+    "marca": "Masterprint",
+    "material": "PLA",
+    "descricao": "Cód. 231010006 - Verde brilhante e acabamento limpo.",
+    "link_shopee": "https://shopee.com.br",
+    "ancora": "filamentos.html#pla"
+  },
+  {
+    "id": "231010007",
+    "nome": "Filamento PLA Básico Dourado Masterprint 1kg",
+    "categoria": "Filamentos",
+    "marca": "Masterprint",
+    "material": "PLA",
+    "descricao": "Cód. 231010007 - Tom dourado para peças decorativas.",
+    "link_shopee": "https://shopee.com.br",
+    "ancora": "filamentos.html#pla"
+  },
+  {
+    "id": "231010008",
+    "nome": "Filamento PLA Básico Madeira Masterprint 1kg",
+    "categoria": "Filamentos",
+    "marca": "Masterprint",
+    "material": "PLA",
+    "descricao": "Cód. 231010008 - Textura com tom amadeirado.",
+    "link_shopee": "https://shopee.com.br",
+    "ancora": "filamentos.html#pla"
+  },
+  {
+    "id": "231010009",
+    "nome": "Filamento PLA Básico Amarelo Masterprint 1kg",
+    "categoria": "Filamentos",
+    "marca": "Masterprint",
+    "material": "PLA",
+    "descricao": "Cód. 231010009 - Amarelo vivo de alta definição.",
+    "link_shopee": "https://shopee.com.br",
+    "ancora": "filamentos.html#pla"
+  },
+  {
+    "id": "231010019",
+    "nome": "Filamento PLA Básico Branco Masterprint 1kg",
+    "categoria": "Filamentos",
+    "marca": "Masterprint",
+    "material": "PLA",
+    "descricao": "Cód. 231010019 - Branco puro universal.",
+    "link_shopee": "https://shopee.com.br",
+    "ancora": "filamentos.html#pla"
+  },
+  {
+    "id": "231010020",
+    "nome": "Filamento PLA Básico Rosa Masterprint 1kg",
+    "categoria": "Filamentos",
+    "marca": "Masterprint",
+    "material": "PLA",
+    "descricao": "Cód. 231010020 - Tom rosa vibrante.",
+    "link_shopee": "https://shopee.com.br",
+    "ancora": "filamentos.html#pla"
+  },
+  {
+    "id": "231010021",
+    "nome": "Filamento PLA Básico Azul Escuro Masterprint 1kg",
+    "categoria": "Filamentos",
+    "marca": "Masterprint",
+    "material": "PLA",
+    "descricao": "Cód. 231010021 - Azul marinho/escuro sólido.",
+    "link_shopee": "https://shopee.com.br",
+    "ancora": "filamentos.html#pla"
+  },
+  {
+    "id": "231010022",
+    "nome": "Filamento PLA Básico Prata Masterprint 1kg",
+    "categoria": "Filamentos",
+    "marca": "Masterprint",
+    "material": "PLA",
+    "descricao": "Cód. 231010022 - Efeito prata clássico.",
+    "link_shopee": "https://shopee.com.br",
+    "ancora": "filamentos.html#pla"
+  },
+  {
+    "id": "231010023",
+    "nome": "Filamento PLA Básico Laranja Masterprint 1kg",
+    "categoria": "Filamentos",
+    "marca": "Masterprint",
+    "material": "PLA",
+    "descricao": "Cód. 231010023 - Laranja chamativo e sólido.",
+    "link_shopee": "https://shopee.com.br",
+    "ancora": "filamentos.html#pla"
+  },
+  {
+    "id": "231010026",
+    "nome": "Filamento PLA Básico Preto Masterprint 1kg",
+    "categoria": "Filamentos",
+    "marca": "Masterprint",
+    "material": "PLA",
+    "descricao": "Cód. 231010026 - Preto absoluto padrão.",
+    "link_shopee": "https://shopee.com.br",
+    "ancora": "filamentos.html#pla"
+  },
+
+  // --- PLA SILK & FOSCO ---
+  {
+    "id": "231010036",
+    "nome": "Filamento PLA Silk Bronze Masterprint 1kg",
+    "categoria": "Filamentos",
+    "marca": "Masterprint",
+    "material": "PLA",
+    "descricao": "Cód. 231010036 - Efeito metálico silk bronze de alto brilho.",
+    "link_shopee": "https://shopee.com.br",
+    "ancora": "filamentos.html#pla"
+  },
+  {
+    "id": "231010037",
+    "nome": "Filamento PLA Silk Prata Masterprint 1kg",
+    "categoria": "Filamentos",
+    "marca": "Masterprint",
+    "material": "PLA",
+    "descricao": "Cód. 231010037 - Efeito metálico silk prata acetinado.",
+    "link_shopee": "https://shopee.com.br",
+    "ancora": "filamentos.html#pla"
+  },
+  {
+    "id": "231010038",
+    "nome": "Filamento PLA Silk Ouro Masterprint 1kg",
+    "categoria": "Filamentos",
+    "marca": "Masterprint",
+    "material": "PLA",
+    "descricao": "Cód. 231010038 - Efeito silk ouro brilhante.",
+    "link_shopee": "https://shopee.com.br",
+    "ancora": "filamentos.html#pla"
+  },
+  {
+    "id": "231010105",
+    "nome": "Filamento PLA Básico Fosco Preto Carbono Masterprint 1kg",
+    "categoria": "Filamentos",
+    "marca": "Masterprint",
+    "material": "PLA",
+    "descricao": "Cód. 231010105 - Acabamento fosco texturizado.",
+    "link_shopee": "https://shopee.com.br",
+    "ancora": "filamentos.html#pla"
+  },
+
+  // =========================================================================
+  // 2. CATÁLOGO COMPLETO - MASTERPRINT PETG BÁSICO & ESPECIAL
+  // =========================================================================
+  {
+    "id": "231020001",
+    "nome": "Filamento PETG Básico Preto Masterprint 1kg",
+    "categoria": "Filamentos",
+    "marca": "Masterprint",
+    "material": "PETG",
+    "descricao": "Cód. 231020001 - Resistência mecânica superior em preto.",
+    "link_shopee": "https://shopee.com.br",
+    "ancora": "filamentos.html#petg"
+  },
+  {
+    "id": "231020002",
+    "nome": "Filamento PETG Básico Branco Masterprint 1kg",
+    "categoria": "Filamentos",
+    "marca": "Masterprint",
+    "material": "PETG",
+    "descricao": "Cód. 231020002 - Branco funcional de alta durabilidade.",
+    "link_shopee": "https://shopee.com.br",
+    "ancora": "filamentos.html#petg"
+  },
+  {
+    "id": "231020003",
+    "nome": "Filamento PETG Básico Azul Masterprint 1kg",
+    "categoria": "Filamentos",
+    "marca": "Masterprint",
+    "material": "PETG",
+    "descricao": "Cód. 231020003 - PETG Azul resistente.",
+    "link_shopee": "https://shopee.com.br",
+    "ancora": "filamentos.html#petg"
+  },
+  {
+    "id": "231020004",
+    "nome": "Filamento PETG Básico Verde Masterprint 1kg",
+    "categoria": "Filamentos",
+    "marca": "Masterprint",
+    "material": "PETG",
+    "descricao": "Cód. 231020004 - PETG Verde para peças técnicas.",
+    "link_shopee": "https://shopee.com.br",
+    "ancora": "filamentos.html#petg"
+  },
+  {
+    "id": "231020006",
+    "nome": "Filamento PETG Translúcido Amarelo Masterprint 1kg",
+    "categoria": "Filamentos",
+    "marca": "Masterprint",
+    "material": "PETG",
+    "descricao": "Cód. 231020006 - Visual cristalino e translúcido amarelo.",
+    "link_shopee": "https://shopee.com.br",
+    "ancora": "filamentos.html#petg"
+  },
+  {
+    "id": "231020007",
+    "nome": "Filamento PETG Translúcido Azul Masterprint 1kg",
+    "categoria": "Filamentos",
+    "marca": "Masterprint",
+    "material": "PETG",
+    "descricao": "Cód. 231020007 - Visual cristalino e translúcido azul.",
+    "link_shopee": "https://shopee.com.br",
+    "ancora": "filamentos.html#petg"
+  },
+  {
+    "id": "231020031",
+    "nome": "Filamento PETG Especial Fibra de Carbono Masterprint 1kg",
+    "categoria": "Filamentos",
+    "marca": "Masterprint",
+    "material": "PETG",
+    "descricao": "Cód. 231020031 - Altíssima rigidez técnica.",
+    "link_shopee": "https://shopee.com.br",
+    "ancora": "filamentos.html#petg"
+  },
+
+  // =========================================================================
+  // 3. CATÁLOGO COMPLETO - MASTERPRINT ABS, TPU & ASA
+  // =========================================================================
+  {
+    "id": "231030001",
+    "nome": "Filamento ABS Básico Preto Masterprint 1kg",
+    "categoria": "Filamentos",
+    "marca": "Masterprint",
+    "material": "ABS",
+    "descricao": "Cód. 231030001 - Desempenho industrial e térmico.",
+    "link_shopee": "https://shopee.com.br",
+    "ancora": "filamentos.html#abs"
+  },
+  {
+    "id": "231030002",
+    "nome": "Filamento ABS Básico Branco Masterprint 1kg",
+    "categoria": "Filamentos",
+    "marca": "Masterprint",
+    "material": "ABS",
+    "descricao": "Cód. 231030002 - Branco ideal para pós-processamento.",
+    "link_shopee": "https://shopee.com.br",
+    "ancora": "filamentos.html#abs"
+  },
+  {
+    "id": "231050001",
+    "nome": "Filamento TPU Flexível Preto Masterprint 1kg",
+    "categoria": "Filamentos",
+    "marca": "Masterprint",
+    "material": "TPU",
+    "descricao": "Cód. 231050001 - Toque emborrachado e alta elasticidade.",
+    "link_shopee": "https://shopee.com.br",
+    "ancora": "filamentos.html#tpu"
+  },
+  {
+    "id": "231050002",
+    "nome": "Filamento TPU Flexível Branco Masterprint 1kg",
+    "categoria": "Filamentos",
+    "marca": "Masterprint",
+    "material": "TPU",
+    "descricao": "Cód. 231050002 - TPU flexível em tom branco.",
+    "link_shopee": "https://shopee.com.br",
+    "ancora": "filamentos.html#tpu"
+  },
+  {
+    "id": "231060001",
+    "nome": "Filamento ASA UV Preto Masterprint 1kg",
+    "categoria": "Filamentos",
+    "marca": "Masterprint",
+    "material": "ASA",
+    "descricao": "Cód. 231060001 - Resistência máxima a raios UV e intempéries.",
+    "link_shopee": "https://shopee.com.br",
+    "ancora": "filamentos.html#asa"
+  },
+  {
+    "id": "231060002",
+    "nome": "Filamento ASA UV Branco Masterprint 1kg",
+    "categoria": "Filamentos",
+    "marca": "Masterprint",
+    "material": "ASA",
+    "descricao": "Cód. 231060002 - Proteção solar externa sem amarelar.",
+    "link_shopee": "https://shopee.com.br",
+    "ancora": "filamentos.html#asa"
+  },
+
+  // =========================================================================
+  // 4. IMPRESSÕES 3D & PROJETOS PERSONALIZADOS (PRO IMPORTS 3D)
+  // =========================================================================
+  {
+    "id": "pro-chaveiro-gol-gti",
+    "nome": "Chaveiro 5 Ganchos Gol GTI 3D",
     "categoria": "Impressões 3D",
     "marca": "Pro Imports 3D",
     "material": "PETG",
-    "descricao": "Chaveiro exclusivo em alta definição.",
+    "descricao": "Suporte de chaves automotivo temático Gol GTI.",
     "link_shopee": "https://shopee.com.br",
-    "ancora": "impressoes.html"
+    "ancora": "impressoes.html#chaveiros"
+  },
+  {
+    "id": "pro-chaveiro-porsche-gt3",
+    "nome": "Chaveiro 5 Ganchos Porsche GT3 3D",
+    "categoria": "Impressões 3D",
+    "marca": "Pro Imports 3D",
+    "material": "PETG",
+    "descricao": "Porta-chaves de parede temático Porsche GT3.",
+    "link_shopee": "https://shopee.com.br",
+    "ancora": "impressoes.html#chaveiros"
+  },
+  {
+    "id": "pro-chaveiro-corinthians",
+    "nome": "Chaveiro Memorial Corinthians 1976",
+    "categoria": "Impressões 3D",
+    "marca": "Pro Imports 3D",
+    "material": "PETG",
+    "descricao": "Chaveiro comemorativo em alta definição.",
+    "link_shopee": "https://shopee.com.br",
+    "ancora": "impressoes.html#chaveiros"
+  },
+  {
+    "id": "pro-cortador-biscoito",
+    "nome": "Cortadores de Massa e Biscoito em PETG",
+    "categoria": "Impressões 3D",
+    "marca": "Pro Imports 3D",
+    "material": "PETG",
+    "descricao": "Cortadores culinários de alta precisão.",
+    "link_shopee": "https://shopee.com.br",
+    "ancora": "impressoes.html#utilidades"
+  },
+  {
+    "id": "pro-action-figure",
+    "nome": "Action Figures e Bonecos Musculosos",
+    "categoria": "Impressões 3D",
+    "marca": "Pro Imports 3D",
+    "material": "PLA / PETG",
+    "descricao": "Colecionáveis detalhados sob encomenda.",
+    "link_shopee": "https://shopee.com.br",
+    "ancora": "impressoes.html#colecionaveis"
   }
 ]
