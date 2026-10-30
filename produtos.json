@@ -1,7 +1,4 @@
 [
-  // =========================================================================
-  // 1. CATÁLOGO COMPLETO - MASTERPRINT PLA BÁSICO & ESPECIAL
-  // =========================================================================
   {
     "id": "231010003",
     "nome": "Filamento PLA Básico Azul Masterprint 1kg",
@@ -132,8 +129,6 @@
     "link_shopee": "https://shopee.com.br",
     "ancora": "filamentos.html#pla"
   },
-
-  // --- PLA SILK & FOSCO ---
   {
     "id": "231010036",
     "nome": "Filamento PLA Silk Bronze Masterprint 1kg",
@@ -174,10 +169,6 @@
     "link_shopee": "https://shopee.com.br",
     "ancora": "filamentos.html#pla"
   },
-
-  // =========================================================================
-  // 2. CATÁLOGO COMPLETO - MASTERPRINT PETG BÁSICO & ESPECIAL
-  // =========================================================================
   {
     "id": "231020001",
     "nome": "Filamento PETG Básico Preto Masterprint 1kg",
@@ -248,10 +239,6 @@
     "link_shopee": "https://shopee.com.br",
     "ancora": "filamentos.html#petg"
   },
-
-  // =========================================================================
-  // 3. CATÁLOGO COMPLETO - MASTERPRINT ABS, TPU & ASA
-  // =========================================================================
   {
     "id": "231030001",
     "nome": "Filamento ABS Básico Preto Masterprint 1kg",
@@ -312,10 +299,6 @@
     "link_shopee": "https://shopee.com.br",
     "ancora": "filamentos.html#asa"
   },
-
-  // =========================================================================
-  // 4. IMPRESSÕES 3D & PROJETOS PERSONALIZADOS (PRO IMPORTS 3D)
-  // =========================================================================
   {
     "id": "pro-chaveiro-gol-gti",
     "nome": "Chaveiro 5 Ganchos Gol GTI 3D",
