@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pro Imports 3D | Filamentos</title>
+  <title>Pro Imports 3D | Filamentos Masterprint</title>
   
   <link rel="icon" type="image/png" href="logo.png">
   <link rel="apple-touch-icon" href="logo.png">
@@ -121,79 +121,90 @@
     }
     .search-item-empty { padding: 0.85rem; text-align: center; font-size: 0.85rem; color: var(--text-muted); }
 
-    .container { max-width: 1000px; width: 100%; margin: 0 auto; padding: 3rem 1rem; flex: 1; }
-    h1 { font-size: 2.25rem; font-weight: 700; color: var(--text-main); margin-bottom: 0.5rem; }
+    /* CONTEÚDO PRINCIPAL */
+    .container { max-width: 1140px; width: 100%; margin: 0 auto; padding: 3rem 1rem; flex: 1; }
+    h1 { font-size: 2.25rem; font-weight: 800; color: var(--text-main); margin-bottom: 0.5rem; }
     .subtitle { color: var(--text-muted); font-size: 1.1rem; margin-bottom: 2rem; line-height: 1.5; }
 
-    .brand-nav { display: flex; gap: 1rem; margin-bottom: 2.5rem; flex-wrap: wrap; }
-    .brand-btn {
-      text-decoration: none; padding: 0.6rem 1.25rem; background: #ffffff;
-      border: 1px solid var(--border-color); border-radius: 30px; color: var(--text-main);
-      font-weight: 600; font-size: 0.95rem; box-shadow: var(--shadow-sm); transition: all 0.25s ease;
-      display: inline-flex; align-items: center; gap: 0.5rem;
+    /* SUBMENUS DE MATERIAIS MASTERPRINT */
+    .sub-nav {
+      display: flex; gap: 0.75rem; margin-bottom: 2.5rem; flex-wrap: wrap;
+      background: #ffffff; padding: 0.75rem 1.25rem; border-radius: 40px;
+      border: 1px solid var(--border-color); box-shadow: var(--shadow-sm);
     }
-    .brand-btn:hover { border-color: var(--accent-cyan); color: var(--accent-cyan); transform: translateY(-2px); box-shadow: var(--shadow-lg); }
-
-    .sub-nav { display: flex; gap: 0.75rem; margin-bottom: 2rem; flex-wrap: wrap; }
     .sub-btn {
-      text-decoration: none; padding: 0.4rem 1rem; background: rgba(2, 132, 199, 0.08);
+      text-decoration: none; padding: 0.5rem 1.25rem; background: rgba(2, 132, 199, 0.08);
       border: 1px solid rgba(2, 132, 199, 0.2); border-radius: 20px; color: var(--accent-cyan);
-      font-weight: 600; font-size: 0.85rem; transition: all 0.2s ease;
+      font-weight: 700; font-size: 0.9rem; transition: all 0.2s ease;
     }
-    .sub-btn:hover { background: var(--accent-cyan); color: #ffffff; }
+    .sub-btn:hover { background: var(--accent-cyan); color: #ffffff; transform: translateY(-1px); }
 
-    .brand-section { padding-top: 2rem; margin-bottom: 3.5rem; }
+    .material-section {
+      scroll-margin-top: 100px;
+      margin-bottom: 3.5rem;
+    }
+
     .category-title {
-      font-size: 1.6rem; font-weight: 700; color: var(--text-main); margin-bottom: 1rem;
-      display: flex; align-items: center; gap: 1rem; border-left: 4px solid var(--accent-cyan); padding-left: 0.75rem;
+      font-size: 1.5rem; font-weight: 700; color: var(--text-main); margin-bottom: 1.25rem;
+      display: flex; align-items: center; gap: 0.75rem; border-left: 4px solid var(--accent-cyan); padding-left: 0.75rem;
     }
-    .brand-logo { height: 38px; width: auto; max-width: 140px; object-fit: contain; display: inline-block; vertical-align: middle; }
 
-    .products-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-bottom: 2rem; }
+    /* GRID DE PRODUTOS LADO A LADO (3 COLUNAS) */
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
     .product-card {
       background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 16px;
       overflow: hidden; box-shadow: var(--shadow-sm); transition: all 0.3s ease; display: flex; flex-direction: column;
     }
     .product-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); border-color: rgba(2, 132, 199, 0.3); }
 
+    /* ESPAÇO DEDICADO PARA FOTO DO PRODUTO */
     .product-img-container {
-      width: 100%; height: 190px; background: #f1f5f9; display: flex; align-items: center; justify-content: center;
-      color: var(--text-muted); font-size: 0.9rem; border-bottom: 1px solid var(--border-color);
+      width: 100%; height: 210px; background: #f1f5f9; display: flex; align-items: center; justify-content: center;
+      color: var(--text-muted); font-size: 0.9rem; border-bottom: 1px solid var(--border-color); overflow: hidden;
     }
-    .product-info { padding: 1.5rem; flex: 1; display: flex; flex-direction: column; justify-content: space-between; }
-    .product-info h3 { font-size: 1.15rem; font-weight: 600; color: var(--text-main); margin-bottom: 0.5rem; }
-    .product-info p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 1.25rem; }
+    .product-img-container img {
+      width: 100%; height: 100%; object-fit: contain; padding: 0.5rem;
+    }
+
+    .product-info { padding: 1.25rem; flex: 1; display: flex; flex-direction: column; justify-content: space-between; }
+    .product-info h3 { font-size: 1.1rem; font-weight: 700; color: var(--text-main); margin-bottom: 0.4rem; line-height: 1.3; }
+    .product-info p { font-size: 0.875rem; color: var(--text-muted); line-height: 1.4; margin-bottom: 1.25rem; }
 
     .badge-brand {
       display: inline-block; padding: 0.2rem 0.6rem; background: rgba(2, 132, 199, 0.1);
       color: var(--accent-cyan); font-size: 0.75rem; font-weight: 700; border-radius: 4px; margin-bottom: 0.5rem; text-transform: uppercase;
     }
+
     .btn-buy {
-      display: block; width: 100%; text-align: center; padding: 0.75rem; background-color: var(--accent-orange);
-      color: #fff; font-weight: 600; border-radius: 8px; text-decoration: none; transition: opacity 0.2s;
+      display: block; width: 100%; text-align: center; padding: 0.7rem; background-color: var(--accent-orange);
+      color: #fff; font-weight: 700; font-size: 0.9rem; border-radius: 8px; text-decoration: none; transition: opacity 0.2s;
     }
     .btn-buy:hover { opacity: 0.9; }
-
-    .coming-soon-card {
-      background: #ffffff; border: 2px dashed var(--border-color); border-radius: 16px;
-      padding: 3rem 2rem; text-align: center; color: var(--text-muted);
-    }
-    .coming-soon-card span.badge-soon {
-      display: inline-block; padding: 0.35rem 1rem; background: rgba(249, 115, 22, 0.1);
-      color: var(--accent-orange); font-weight: 700; font-size: 0.85rem; border-radius: 20px; margin-bottom: 1rem; text-transform: uppercase;
-    }
 
     footer {
       background: #ffffff; border-top: 1px solid var(--border-color); padding: 2rem 1rem;
       text-align: center; color: var(--text-muted); font-size: 0.875rem; margin-top: auto;
     }
 
-    @media (max-width: 768px) {
+    /* AJUSTES RESPONSIVOS */
+    @media (max-width: 992px) {
+      .products-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 600px) {
       header { padding: 0.8rem 1rem; flex-direction: column; gap: 0.75rem; }
       .header-center { flex-direction: column; gap: 0.5rem; width: 100%; }
       .search-input { width: 100%; }
       nav { gap: 0.5rem; }
       nav a { font-size: 0.85rem; padding: 0.3rem 0.4rem; }
+      .products-grid { grid-template-columns: 1fr; }
+      .sub-nav { justify-content: center; }
     }
   </style>
 </head>
@@ -224,7 +235,7 @@
     <div class="header-center">
       <div class="search-box">
         <span class="search-icon">🔍</span>
-        <input type="text" id="searchInput" class="search-input" placeholder="Buscar no site..." onkeyup="executarBuscaGlobal()">
+        <input type="text" id="searchInput" class="search-input" placeholder="Buscar cor ou material..." onkeyup="executarBuscaGlobal()">
         <div id="searchResults" class="search-results"></div>
       </div>
 
@@ -238,142 +249,196 @@
   </header>
 
   <div class="container">
-    <h1>Catálogo de Filamentos</h1>
-    <p class="subtitle">Selecione a marca desejada abaixo para visualizar os suprimentos disponíveis:</p>
+    <h1>Catálogo de Filamentos Masterprint</h1>
+    <p class="subtitle">Selecione o tipo de material desejado para navegar pelas categorias:</p>
 
-    <div class="brand-nav">
-      <a href="#masterprint" class="brand-btn">🧵 Masterprint</a>
-      <a href="#voolt3d" class="brand-btn">⚡ Voolt3D</a>
-      <a href="#sunlu" class="brand-btn">🌐 Sunlu</a>
+    <!-- SUBMENU FIXO DE NAVEGAÇÃO POR MATERIAL -->
+    <div class="sub-nav">
+      <a href="#pla" class="sub-btn">PLA</a>
+      <a href="#petg" class="sub-btn">PETG</a>
+      <a href="#abs" class="sub-btn">ABS</a>
+      <a href="#tpu" class="sub-btn">TPU / TPR</a>
+      <a href="#asa" class="sub-btn">ASA</a>
     </div>
 
-    <!-- SEÇÃO MASTERPRINT COM SUBMENUS -->
-    <section id="masterprint" class="brand-section">
+    <!-- 1. CATEGORIA PLA -->
+    <section id="pla" class="material-section">
       <div class="category-title">
-        <span>Masterprint</span>
+        <span>🔹 Filamentos PLA Masterprint</span>
       </div>
-
-      <div class="sub-nav">
-        <a href="#pla" class="sub-btn">PLA</a>
-        <a href="#petg" class="sub-btn">PETG</a>
-        <a href="#abs" class="sub-btn">ABS</a>
-        <a href="#tpu" class="sub-btn">TPU</a>
-        <a href="#asa" class="sub-btn">ASA</a>
-      </div>
-
-      <!-- PLA -->
-      <div id="pla" style="padding-top: 1rem; margin-bottom: 2rem;">
-        <h3 style="font-size: 1.25rem; margin-bottom: 1rem; color: var(--text-main);">🔹 Masterprint PLA</h3>
-        <div class="products-grid">
-          <div class="product-card">
-            <div class="product-img-container"><span>Foto PLA Masterprint</span></div>
-            <div class="product-info">
-              <div>
-                <span class="badge-brand">Masterprint</span>
-                <h3>PLA (Básico, Fosco & Silk)</h3>
-                <p>Acabamento impecável, cores vivas e alta definição para protótipos e decoração.</p>
-              </div>
-              <a href="https://shopee.com.br" target="_blank" class="btn-buy">Comprar na Shopee 🛍️</a>
+      <div class="products-grid">
+        <div class="product-card">
+          <div class="product-img-container">
+            <!-- Insira a tag <img> aqui quando tiver a foto -->
+            <span>Foto PLA Básico</span>
+          </div>
+          <div class="product-info">
+            <div>
+              <span class="badge-brand">Masterprint</span>
+              <h3>PLA Básico 1kg</h3>
+              <p>Excelente acabamento visual, cores vivas e ótima estabilidade para uso geral.</p>
             </div>
+            <a href="https://shopee.com.br" target="_blank" class="btn-buy">Comprar na Shopee 🛍️</a>
           </div>
         </div>
-      </div>
 
-      <!-- PETG -->
-      <div id="petg" style="padding-top: 1rem; margin-bottom: 2rem;">
-        <h3 style="font-size: 1.25rem; margin-bottom: 1rem; color: var(--text-main);">🔹 Masterprint PETG</h3>
-        <div class="products-grid">
-          <div class="product-card">
-            <div class="product-img-container"><span>Foto PETG Masterprint</span></div>
-            <div class="product-info">
-              <div>
-                <span class="badge-brand">Masterprint</span>
-                <h3>PETG Básico & Especial</h3>
-                <p>Resistência mecânica superior, leve flexibilidade e estabilidade para peças funcionais.</p>
-              </div>
-              <a href="https://shopee.com.br" target="_blank" class="btn-buy">Comprar na Shopee 🛍️</a>
+        <div class="product-card">
+          <div class="product-img-container">
+            <span>Foto PLA Fosco</span>
+          </div>
+          <div class="product-info">
+            <div>
+              <span class="badge-brand">Masterprint</span>
+              <h3>PLA Básico Fosco 1kg</h3>
+              <p>Acabamento matte texturizado elegante que esconde as linhas de camada da impressão.</p>
             </div>
+            <a href="https://shopee.com.br" target="_blank" class="btn-buy">Comprar na Shopee 🛍️</a>
           </div>
         </div>
-      </div>
 
-      <!-- ABS -->
-      <div id="abs" style="padding-top: 1rem; margin-bottom: 2rem;">
-        <h3 style="font-size: 1.25rem; margin-bottom: 1rem; color: var(--text-main);">🔹 Masterprint ABS</h3>
-        <div class="products-grid">
-          <div class="product-card">
-            <div class="product-img-container"><span>Foto ABS Masterprint</span></div>
-            <div class="product-info">
-              <div>
-                <span class="badge-brand">Masterprint</span>
-                <h3>ABS Básico Industrial</h3>
-                <p>Desempenho industrial, rigidez e excelente resistência térmica.</p>
-              </div>
-              <a href="https://shopee.com.br" target="_blank" class="btn-buy">Comprar na Shopee 🛍️</a>
+        <div class="product-card">
+          <div class="product-img-container">
+            <span>Foto PLA Silk</span>
+          </div>
+          <div class="product-info">
+            <div>
+              <span class="badge-brand">Masterprint</span>
+              <h3>PLA Silk Metálico 1kg</h3>
+              <p>Efeito acetinado de alto brilho para peças decorativas e colecionáveis.</p>
             </div>
+            <a href="https://shopee.com.br" target="_blank" class="btn-buy">Comprar na Shopee 🛍️</a>
           </div>
         </div>
-      </div>
-
-      <!-- TPU -->
-      <div id="tpu" style="padding-top: 1rem; margin-bottom: 2rem;">
-        <h3 style="font-size: 1.25rem; margin-bottom: 1rem; color: var(--text-main);">🔹 Masterprint TPU</h3>
-        <div class="products-grid">
-          <div class="product-card">
-            <div class="product-img-container"><span>Foto TPU Masterprint</span></div>
-            <div class="product-info">
-              <div>
-                <span class="badge-brand">Masterprint</span>
-                <h3>TPU Flexível</h3>
-                <p>Alta elasticidade, toque emborrachado e durabilidade para peças funcionais.</p>
-              </div>
-              <a href="https://shopee.com.br" target="_blank" class="btn-buy">Comprar na Shopee 🛍️</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- ASA -->
-      <div id="asa" style="padding-top: 1rem; margin-bottom: 2rem;">
-        <h3 style="font-size: 1.25rem; margin-bottom: 1rem; color: var(--text-main);">🔹 Masterprint ASA</h3>
-        <div class="products-grid">
-          <div class="product-card">
-            <div class="product-img-container"><span>Foto ASA Masterprint</span></div>
-            <div class="product-info">
-              <div>
-                <span class="badge-brand">Masterprint</span>
-                <h3>ASA Premium UV</h3>
-                <p>Máxima resistência contra raios solares e intempéries para uso externo.</p>
-              </div>
-              <a href="https://shopee.com.br" target="_blank" class="btn-buy">Comprar na Shopee 🛍️</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </section>
-
-    <!-- VOOLT3D -->
-    <section id="voolt3d" class="brand-section">
-      <div class="category-title">
-        <img src="logo/voolt3d.png" alt="Voolt3D" class="brand-logo">
-      </div>
-      <div class="coming-soon-card">
-        <span class="badge-soon">Em Breve</span>
-        <h3>Catálogo Voolt3D em preparação</h3>
-        <p>Estamos trabalhando para disponibilizar a linha completa de filamentos Voolt3D em nossa loja.</p>
       </div>
     </section>
 
-    <!-- SUNLU -->
-    <section id="sunlu" class="brand-section">
+    <!-- 2. CATEGORIA PETG -->
+    <section id="petg" class="material-section">
       <div class="category-title">
-        <img src="logo/sunlu.png" alt="Sunlu" class="brand-logo">
+        <span>🔹 Filamentos PETG Masterprint</span>
       </div>
-      <div class="coming-soon-card">
-        <span class="badge-soon">Em Breve</span>
-        <h3>Catálogo Sunlu em preparação</h3>
-        <p>Novas opções e cores de filamentos Sunlu estarão disponíveis em breve.</p>
+      <div class="products-grid">
+        <div class="product-card">
+          <div class="product-img-container">
+            <span>Foto PETG Básico</span>
+          </div>
+          <div class="product-info">
+            <div>
+              <span class="badge-brand">Masterprint</span>
+              <h3>PETG Básico 1kg</h3>
+              <p>Alta resistência mecânica e durabilidade para peças funcionais e estruturais.</p>
+            </div>
+            <a href="https://shopee.com.br" target="_blank" class="btn-buy">Comprar na Shopee 🛍️</a>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-img-container">
+            <span>Foto PETG Translúcido</span>
+          </div>
+          <div class="product-info">
+            <div>
+              <span class="badge-brand">Masterprint</span>
+              <h3>PETG Translúcido 1kg</h3>
+              <p>Acabamento cristalino e translúcido com excelente adesão entre camadas.</p>
+            </div>
+            <a href="https://shopee.com.br" target="_blank" class="btn-buy">Comprar na Shopee 🛍️</a>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-img-container">
+            <span>Foto PETG Fibra de Carbono</span>
+          </div>
+          <div class="product-info">
+            <div>
+              <span class="badge-brand">Masterprint</span>
+              <h3>PETG Fibra de Carbono 1kg</h3>
+              <p>Alta rigidez técnica, leveza e acabamento preto fosco profissional.</p>
+            </div>
+            <a href="https://shopee.com.br" target="_blank" class="btn-buy">Comprar na Shopee 🛍️</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. CATEGORIA ABS -->
+    <section id="abs" class="material-section">
+      <div class="category-title">
+        <span>🔹 Filamentos ABS Masterprint</span>
+      </div>
+      <div class="products-grid">
+        <div class="product-card">
+          <div class="product-img-container">
+            <span>Foto ABS Básico</span>
+          </div>
+          <div class="product-info">
+            <div>
+              <span class="badge-brand">Masterprint</span>
+              <h3>ABS Industrial 1kg</h3>
+              <p>Desempenho industrial, rigidez mecânica e alta resistência térmica ao calor.</p>
+            </div>
+            <a href="https://shopee.com.br" target="_blank" class="btn-buy">Comprar na Shopee 🛍️</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. CATEGORIA TPU / TPR -->
+    <section id="tpu" class="material-section">
+      <div class="category-title">
+        <span>🔹 Filamentos Flexíveis TPU / TPR Masterprint</span>
+      </div>
+      <div class="products-grid">
+        <div class="product-card">
+          <div class="product-img-container">
+            <span>Foto TPU Flexível</span>
+          </div>
+          <div class="product-info">
+            <div>
+              <span class="badge-brand">Masterprint</span>
+              <h3>TPU Flexível 1.75mm 1kg</h3>
+              <p>Toque emborrachado, alta elasticidade e absorção de impacto para vedações e capas.</p>
+            </div>
+            <a href="https://shopee.com.br" target="_blank" class="btn-buy">Comprar na Shopee 🛍️</a>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-img-container">
+            <span>Foto TPR Flexível</span>
+          </div>
+          <div class="product-info">
+            <div>
+              <span class="badge-brand">Masterprint</span>
+              <h3>TPR 2.85mm 1kg</h3>
+              <p>Borracha termoplástica elastomérica desenvolvida para extrusoras de 2.85mm.</p>
+            </div>
+            <a href="https://shopee.com.br" target="_blank" class="btn-buy">Comprar na Shopee 🛍️</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. CATEGORIA ASA -->
+    <section id="asa" class="material-section">
+      <div class="category-title">
+        <span>🔹 Filamentos ASA Masterprint</span>
+      </div>
+      <div class="products-grid">
+        <div class="product-card">
+          <div class="product-img-container">
+            <span>Foto ASA UV</span>
+          </div>
+          <div class="product-info">
+            <div>
+              <span class="badge-brand">Masterprint</span>
+              <h3>ASA Premium UV 1kg</h3>
+              <p>Máxima resistência a raios ultravioleta, sol e intempéries para uso em ambientes externos.</p>
+            </div>
+            <a href="https://shopee.com.br" target="_blank" class="btn-buy">Comprar na Shopee 🛍️</a>
+          </div>
+        </div>
       </div>
     </section>
 
