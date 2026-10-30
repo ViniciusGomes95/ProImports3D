@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pro Imports 3D | Impressões 3D</title>
+
   <link rel="icon" type="image/png" href="logo.png">
   <link rel="apple-touch-icon" href="logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,17 +24,15 @@
       --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.08);
     }
 
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
 
     body {
       font-family: 'Inter', sans-serif;
       background-color: var(--bg-body);
       color: var(--text-main);
       min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      position: relative;
-      overflow-x: hidden;
+      display: flex; flex-direction: column;
+      position: relative; overflow-x: hidden;
     }
 
     .bg-gradient-1 {
@@ -48,40 +47,21 @@
       z-index: -1; pointer-events: none;
     }
 
-    /* HEADER & MENU COM PERSONAGEM ANIMADO */
     header {
-      width: 100%;
-      background: rgba(255, 255, 255, 0.92);
-      backdrop-filter: blur(12px);
-      border-bottom: 2px solid var(--border-color);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      padding: 0.85rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      width: 100%; background: rgba(255, 255, 255, 0.92); backdrop-filter: blur(12px);
+      border-bottom: 2px solid var(--border-color); position: sticky; top: 0; z-index: 1000;
+      padding: 0.85rem 2rem; display: flex; justify-content: space-between; align-items: center;
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
     }
 
     .header-track {
-      position: absolute;
-      bottom: -2px;
-      left: 0;
-      width: 100%;
-      height: 2px;
-      background: linear-gradient(90deg, transparent, var(--accent-cyan), var(--accent-orange), transparent);
-      opacity: 0.3;
+      position: absolute; bottom: -2px; left: 0; width: 100%; height: 2px;
+      background: linear-gradient(90deg, transparent, var(--accent-cyan), var(--accent-orange), transparent); opacity: 0.3;
     }
 
     .funko-walker {
-      position: absolute;
-      bottom: 2px;
-      left: -50px;
-      width: 36px;
-      height: 42px;
-      z-index: 1001;
-      pointer-events: none;
+      position: absolute; bottom: 2px; left: -50px; width: 36px; height: 42px;
+      z-index: 1001; pointer-events: none;
       animation: walkAcross 18s linear infinite, bobbing 0.4s ease-in-out infinite alternate;
     }
 
@@ -93,117 +73,93 @@
       100% { left: -50px; transform: scaleX(1); }
     }
 
-    @keyframes bobbing {
-      0% { transform: translateY(0px); }
-      100% { transform: translateY(-3px); }
-    }
+    @keyframes bobbing { 0% { transform: translateY(0px); } 100% { transform: translateY(-3px); } }
 
     .nav-logo img { height: 40px; width: auto; display: block; }
+    .header-center { display: flex; align-items: center; gap: 1.5rem; }
 
-    nav { display: flex; gap: 2rem; align-items: center; }
-
+    nav { display: flex; gap: 1.5rem; align-items: center; }
     nav a {
-      text-decoration: none;
-      color: var(--text-main);
-      font-weight: 600;
-      font-size: 1.05rem;
-      padding: 0.5rem 0.75rem;
-      border-radius: 8px;
-      transition: all 0.25s ease;
-      position: relative;
+      text-decoration: none; color: var(--text-main); font-weight: 600; font-size: 1rem;
+      padding: 0.5rem 0.75rem; border-radius: 8px; transition: all 0.25s ease; position: relative;
     }
-
     nav a:hover { color: var(--accent-cyan); background-color: rgba(2, 132, 199, 0.05); }
-
     nav a.active { color: var(--accent-cyan); font-weight: 700; }
-
     nav a.active::after {
-      content: '';
-      position: absolute;
-      bottom: -4px;
-      left: 10%;
-      width: 80%;
-      height: 3px;
-      background: linear-gradient(90deg, var(--accent-cyan), var(--accent-orange));
-      border-radius: 10px;
+      content: ''; position: absolute; bottom: -4px; left: 10%; width: 80%; height: 3px;
+      background: linear-gradient(90deg, var(--accent-cyan), var(--accent-orange)); border-radius: 10px;
     }
 
-    /* CONTEÚDO */
-    .container {
-      max-width: 1000px;
-      width: 100%;
-      margin: 0 auto;
-      padding: 3rem 1rem;
-      flex: 1;
+    /* BARRA DE PESQUISA GLOBAL */
+    .search-box { position: relative; display: flex; align-items: center; }
+    .search-input {
+      padding: 0.45rem 1rem 0.45rem 2.2rem; border: 1px solid var(--border-color);
+      border-radius: 20px; font-size: 0.875rem; outline: none; background: #f1f5f9;
+      transition: all 0.25s ease; width: 180px;
+    }
+    .search-input:focus {
+      width: 240px; background: #ffffff; border-color: var(--accent-cyan);
+      box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.15);
+    }
+    .search-icon { position: absolute; left: 0.75rem; font-size: 0.85rem; color: var(--text-muted); pointer-events: none; }
+
+    .search-results {
+      position: absolute; top: 110%; right: 0; width: 300px; background: #ffffff;
+      border: 1px solid var(--border-color); border-radius: 12px;
+      box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1); display: none; z-index: 2000;
+      overflow: hidden; max-height: 350px; overflow-y: auto;
+    }
+    .search-item {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 0.75rem 1rem; text-decoration: none; color: var(--text-main); font-size: 0.85rem;
+      border-bottom: 1px solid #f1f5f9; transition: background 0.2s;
+    }
+    .search-item:hover { background: rgba(2, 132, 199, 0.05); color: var(--accent-cyan); }
+    .search-category {
+      font-size: 0.65rem; padding: 0.15rem 0.4rem; background: #e2e8f0;
+      border-radius: 4px; color: var(--text-muted); white-space: nowrap;
     }
 
+    .container { max-width: 1000px; width: 100%; margin: 0 auto; padding: 3rem 1rem; flex: 1; }
     h1 { font-size: 2.25rem; font-weight: 700; color: var(--text-main); margin-bottom: 0.5rem; }
-    .subtitle { color: var(--text-muted); font-size: 1.1rem; margin-bottom: 3rem; line-height: 1.5; }
+    .subtitle { color: var(--text-muted); font-size: 1.1rem; margin-bottom: 2rem; line-height: 1.5; }
 
-    .category-title {
-      font-size: 1.5rem; font-weight: 700; color: var(--text-main);
-      margin: 2rem 0 1.5rem 0; display: flex; align-items: center; gap: 0.5rem;
-      border-left: 4px solid var(--accent-orange); padding-left: 0.75rem;
-    }
-
-    .products-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
-    }
-
+    .products-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-bottom: 3rem; }
     .product-card {
-      background: var(--card-bg);
-      border: 1px solid var(--border-color);
-      border-radius: 16px;
-      overflow: hidden;
-      box-shadow: var(--shadow-sm);
-      transition: all 0.3s ease;
-      display: flex;
-      flex-direction: column;
+      background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 16px;
+      overflow: hidden; box-shadow: var(--shadow-sm); transition: all 0.3s ease; display: flex; flex-direction: column;
     }
-
-    .product-card:hover {
-      transform: translateY(-4px);
-      box-shadow: var(--shadow-lg);
-      border-color: rgba(2, 132, 199, 0.3);
-    }
+    .product-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); border-color: rgba(2, 132, 199, 0.3); }
 
     .product-img-container {
-      width: 100%; height: 190px; background: #f1f5f9;
-      display: flex; align-items: center; justify-content: center;
+      width: 100%; height: 200px; background: #f1f5f9; display: flex; align-items: center; justify-content: center;
       color: var(--text-muted); font-size: 0.9rem; border-bottom: 1px solid var(--border-color);
     }
-
-    .product-info {
-      padding: 1.5rem; flex: 1; display: flex; flex-direction: column; justify-content: space-between;
-    }
-
+    .product-info { padding: 1.5rem; flex: 1; display: flex; flex-direction: column; justify-content: space-between; }
     .product-info h3 { font-size: 1.15rem; font-weight: 600; color: var(--text-main); margin-bottom: 0.5rem; }
     .product-info p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 1.25rem; }
 
-    .badge-brand {
+    .badge-service {
       display: inline-block; padding: 0.2rem 0.6rem; background: rgba(249, 115, 22, 0.1);
       color: var(--accent-orange); font-size: 0.75rem; font-weight: 700; border-radius: 4px; margin-bottom: 0.5rem; text-transform: uppercase;
     }
-
     .btn-buy {
-      display: block; width: 100%; text-align: center; padding: 0.75rem;
-      background-color: var(--accent-cyan); color: #fff; font-weight: 600; border-radius: 8px; text-decoration: none; transition: opacity 0.2s;
+      display: block; width: 100%; text-align: center; padding: 0.75rem; background-color: var(--accent-orange);
+      color: #fff; font-weight: 600; border-radius: 8px; text-decoration: none; transition: opacity 0.2s;
     }
-
     .btn-buy:hover { opacity: 0.9; }
 
     footer {
-      background: #ffffff; border-top: 1px solid var(--border-color);
-      padding: 2rem 1rem; text-align: center; color: var(--text-muted); font-size: 0.875rem; margin-top: auto;
+      background: #ffffff; border-top: 1px solid var(--border-color); padding: 2rem 1rem;
+      text-align: center; color: var(--text-muted); font-size: 0.875rem; margin-top: auto;
     }
 
     @media (max-width: 768px) {
-      header { padding: 0.8rem 1rem; }
-      nav { gap: 0.75rem; }
-      nav a { font-size: 0.9rem; padding: 0.3rem 0.4rem; }
-      h1 { font-size: 1.75rem; }
+      header { padding: 0.8rem 1rem; flex-direction: column; gap: 0.75rem; }
+      .header-center { flex-direction: column; gap: 0.5rem; width: 100%; }
+      .search-input { width: 100%; }
+      nav { gap: 0.5rem; }
+      nav a { font-size: 0.85rem; padding: 0.3rem 0.4rem; }
     }
   </style>
 </head>
@@ -212,10 +168,9 @@
   <div class="bg-gradient-1"></div>
   <div class="bg-gradient-2"></div>
 
-  <!-- HEADER COM MENU ATUALIZADO -->
   <header>
     <div class="nav-logo">
-      <a href="index.html"><img src="logo.png" alt="Pro Imports 3D"></a>
+      <a href="index.html"><img src="logosemfundo.png" alt="Pro Imports 3D"></a>
     </div>
 
     <svg class="funko-walker" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -232,63 +187,101 @@
 
     <div class="header-track"></div>
 
-    <nav>
-      <a href="index.html">Início</a>
-      <a href="filamentos.html">Filamentos</a>
-      <a href="impressoes.html" class="active">Impressões 3D</a>
-      <a href="contato.html">Contato</a>
-    </nav>
+    <div class="header-center">
+      <div class="search-box">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="searchInput" class="search-input" placeholder="Buscar no site..." onkeyup="executarBuscaGlobal()">
+        <div id="searchResults" class="search-results"></div>
+      </div>
+
+      <nav>
+        <a href="index.html">Início</a>
+        <a href="filamentos.html">Filamentos</a>
+        <a href="impressoes.html" class="active">Impressões 3D</a>
+        <a href="contato.html">Contato</a>
+      </nav>
+    </div>
   </header>
 
   <div class="container">
-    <h1>Portfólio de Impressões 3D</h1>
-    <p class="subtitle">Peças exclusivas, utilidades e colecionáveis desenvolvidos com alto rigor técnico e acabamento refinado.</p>
+    <h1>Serviços de Impressão 3D & Projetos</h1>
+    <p class="subtitle">Produção própria com tecnologia FDM em filamentos PETG e PLA de alta qualidade:</p>
 
-    <div class="category-title">🛠️ Nossas Criações & Projetos</div>
-    <div class="products-grid">
-
+    <!-- CHAVEIROS AUTOMOTIVOS -->
+    <div id="chaveiros" class="products-grid">
       <div class="product-card">
-        <div class="product-img-container"><span>Foto Chaveiros 3D</span></div>
+        <div class="product-img-container"><span>Chaveiro Gol GTI</span></div>
         <div class="product-info">
           <div>
-            <span class="badge-brand">Pro Imports 3D</span>
-            <h3>Chaveiros Temáticos Automotivos</h3>
-            <p>Modelos detalhados inspirados em clássicos (Linha GTI, Porsche GT3 e ícones do automobilismo).</p>
+            <span class="badge-service">Pro Imports 3D</span>
+            <h3>Chaveiro 5 Ganchos Gol GTI 3D</h3>
+            <p>Porta-chaves de parede temático impresso em PETG com suporte reforçado de 5 ganchos.</p>
           </div>
-          <a href="https://shopee.com.br" target="_blank" class="btn-buy">Ver na Shopee 🛍️</a>
+          <a href="https://shopee.com.br" target="_blank" class="btn-buy">Comprar na Shopee 🛍️</a>
         </div>
       </div>
 
       <div class="product-card">
-        <div class="product-img-container"><span>Foto Cortadores</span></div>
+        <div class="product-img-container"><span>Chaveiro Porsche GT3</span></div>
         <div class="product-info">
           <div>
-            <span class="badge-brand">Pro Imports 3D</span>
-            <h3>Cortadores de Massa & Biscoito</h3>
-            <p>Produzidos em PETG de alta pureza, unindo durabilidade e um corte limpo e preciso.</p>
+            <span class="badge-service">Pro Imports 3D</span>
+            <h3>Chaveiro 5 Ganchos Porsche GT3 3D</h3>
+            <p>Porta-chaves automotivo exclusivo impresso em PETG com altíssima definição de detalhes.</p>
           </div>
-          <a href="https://shopee.com.br" target="_blank" class="btn-buy">Ver na Shopee 🛍️</a>
+          <a href="https://shopee.com.br" target="_blank" class="btn-buy">Comprar na Shopee 🛍️</a>
         </div>
       </div>
 
       <div class="product-card">
-        <div class="product-img-container"><span>Foto Action Figures</span></div>
+        <div class="product-img-container"><span>Chaveiro Corinthians 1976</span></div>
         <div class="product-info">
           <div>
-            <span class="badge-brand">Pro Imports 3D</span>
-            <h3>Action Figures Customizadas</h3>
-            <p>Colecionáveis detalhados e peças decorativas impressas camada por camada com alta precisão.</p>
+            <span class="badge-service">Pro Imports 3D</span>
+            <h3>Chaveiro Memorial Corinthians 1976</h3>
+            <p>Edição comemorativa temática impressa em PETG com suporte para chaves de casa e veículos.</p>
           </div>
-          <a href="https://shopee.com.br" target="_blank" class="btn-buy">Ver na Shopee 🛍️</a>
+          <a href="https://shopee.com.br" target="_blank" class="btn-buy">Comprar na Shopee 🛍️</a>
         </div>
       </div>
-
     </div>
+
+    <!-- UTILIDADES & CULINÁRIA -->
+    <div id="utilidades" class="products-grid">
+      <div class="product-card">
+        <div class="product-img-container"><span>Cortadores de Biscoito</span></div>
+        <div class="product-info">
+          <div>
+            <span class="badge-service">Culinária & Confeitaria</span>
+            <h3>Cortadores de Massa & Biscoito</h3>
+            <p>Produzidos em PETG de alta estabilidade e corte afiado para uso profissional na cozinha.</p>
+          </div>
+          <a href="https://shopee.com.br" target="_blank" class="btn-buy">Comprar na Shopee 🛍️</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- COLECIONÁVEIS -->
+    <div id="colecionaveis" class="products-grid">
+      <div class="product-card">
+        <div class="product-img-container"><span>Action Figures</span></div>
+        <div class="product-info">
+          <div>
+            <span class="badge-service">Colecionáveis</span>
+            <h3>Action Figures & Bonecos Musculosos</h3>
+            <p>Impressão de personagens, figures detalhadas e peças personalizadas sob encomenda.</p>
+          </div>
+          <a href="contato.html" class="btn-buy" style="background-color: var(--accent-cyan);">Orçar Projeto 💬</a>
+        </div>
+      </div>
+    </div>
+
   </div>
 
   <footer>
     <p>&copy; 2026 Pro Imports 3D. Todos os direitos reservados.</p>
   </footer>
 
+  <script src="search.js"></script>
 </body>
 </html>
