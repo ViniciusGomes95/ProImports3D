@@ -1,0 +1,32 @@
+[
+  {
+    "id": "petg-masterprint-verde",
+    "nome": "Filamento PETG Verde Masterprint 1kg",
+    "categoria": "Filamentos",
+    "marca": "Masterprint",
+    "material": "PETG",
+    "descricao": "Alta resistência mecânica e durabilidade.",
+    "link_shopee": "https://shopee.com.br",
+    "ancora": "filamentos.html#petg"
+  },
+  {
+    "id": "pla-masterprint-silk-ouro",
+    "nome": "Filamento PLA Silk Ouro Masterprint 1kg",
+    "categoria": "Filamentos",
+    "marca": "Masterprint",
+    "material": "PLA",
+    "descricao": "Acabamento brilhante e impecável.",
+    "link_shopee": "https://shopee.com.br",
+    "ancora": "filamentos.html#pla"
+  },
+  {
+    "id": "chaveiro-gol-gti",
+    "nome": "Chaveiro Temático Gol GTI 3D",
+    "categoria": "Impressões 3D",
+    "marca": "Pro Imports 3D",
+    "material": "PETG",
+    "descricao": "Chaveiro exclusivo em alta definição.",
+    "link_shopee": "https://shopee.com.br",
+    "ancora": "impressoes.html"
+  }
+]
