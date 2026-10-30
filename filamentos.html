@@ -47,7 +47,7 @@
       z-index: -1; pointer-events: none;
     }
 
-    /* HEADER CENTRALIZADO E FIXO */
+    /* HEADER FLUIDO */
     header {
       width: 100%; background: rgba(255, 255, 255, 0.92); backdrop-filter: blur(12px);
       border-bottom: 2px solid var(--border-color); position: sticky; top: 0; z-index: 1000;
@@ -55,7 +55,7 @@
     }
 
     .header-container {
-      max-width: 1140px; margin: 0 auto; padding: 0.85rem 1rem;
+      width: 100%; padding: 0.85rem 2.5rem;
       display: flex; justify-content: space-between; align-items: center; position: relative;
     }
 
@@ -126,7 +126,8 @@
     }
     .search-item-empty { padding: 0.85rem; text-align: center; font-size: 0.85rem; color: var(--text-muted); }
 
-    .container { max-width: 1140px; width: 100%; margin: 0 auto; padding: 3rem 1rem; flex: 1; }
+    /* CONTEÚDO FLUIDO */
+    .container { width: 100%; padding: 3rem 2.5rem; flex: 1; }
     h1 { font-size: 2.25rem; font-weight: 800; color: var(--text-main); margin-bottom: 0.5rem; }
     .subtitle { color: var(--text-muted); font-size: 1.1rem; margin-bottom: 2rem; line-height: 1.5; }
 
@@ -155,7 +156,7 @@
 
     .products-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
       gap: 1.5rem;
       margin-bottom: 2rem;
     }
@@ -178,12 +179,8 @@
     .product-info h3 { font-size: 1.15rem; font-weight: 700; color: var(--text-main); margin-bottom: 0; line-height: 1.3; }
 
     footer {
-      background: #ffffff; border-top: 1px solid var(--border-color); padding: 2rem 1rem;
+      background: #ffffff; border-top: 1px solid var(--border-color); padding: 2rem 2.5rem;
       text-align: center; color: var(--text-muted); font-size: 0.875rem; margin-top: auto;
-    }
-
-    @media (max-width: 992px) {
-      .products-grid { grid-template-columns: repeat(2, 1fr); }
     }
 
     @media (max-width: 768px) {
@@ -193,7 +190,8 @@
       .search-input:focus { width: 100%; }
       nav { gap: 0.5rem; justify-content: center; width: 100%; }
       nav a { font-size: 0.85rem; padding: 0.3rem 0.4rem; }
-      .products-grid { grid-template-columns: 1fr; }
+      .container { padding: 2rem 1rem; }
+      footer { padding: 2rem 1rem; }
       .sub-nav { justify-content: center; top: 135px; }
     }
   </style>
@@ -257,124 +255,23 @@
         <span>🔹 Filamentos PLA Masterprint</span>
       </div>
       <div class="products-grid">
-        <div class="product-card">
-          <div class="product-img-container"><span>Foto PLA Azul</span></div>
-          <div class="product-info">
-            <h3>PLA Azul</h3>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <div class="product-img-container"><span>Foto PLA Vermelho</span></div>
-          <div class="product-info">
-            <h3>PLA Vermelho</h3>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <div class="product-img-container"><span>Foto PLA Cinza</span></div>
-          <div class="product-info">
-            <h3>PLA Cinza</h3>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <div class="product-img-container"><span>Foto PLA Verde</span></div>
-          <div class="product-info">
-            <h3>PLA Verde</h3>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <div class="product-img-container"><span>Foto PLA Dourado</span></div>
-          <div class="product-info">
-            <h3>PLA Dourado</h3>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <div class="product-img-container"><span>Foto PLA Madeira</span></div>
-          <div class="product-info">
-            <h3>PLA Madeira</h3>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <div class="product-img-container"><span>Foto PLA Amarelo</span></div>
-          <div class="product-info">
-            <h3>PLA Amarelo</h3>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <div class="product-img-container"><span>Foto PLA Branco</span></div>
-          <div class="product-info">
-            <h3>PLA Branco</h3>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <div class="product-img-container"><span>Foto PLA Rosa</span></div>
-          <div class="product-info">
-            <h3>PLA Rosa</h3>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <div class="product-img-container"><span>Foto PLA Azul Escuro</span></div>
-          <div class="product-info">
-            <h3>PLA Azul Escuro</h3>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <div class="product-img-container"><span>Foto PLA Prata</span></div>
-          <div class="product-info">
-            <h3>PLA Prata</h3>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <div class="product-img-container"><span>Foto PLA Laranja</span></div>
-          <div class="product-info">
-            <h3>PLA Laranja</h3>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <div class="product-img-container"><span>Foto PLA Preto</span></div>
-          <div class="product-info">
-            <h3>PLA Preto</h3>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <div class="product-img-container"><span>Foto PLA Silk Bronze</span></div>
-          <div class="product-info">
-            <h3>PLA Silk Bronze</h3>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <div class="product-img-container"><span>Foto PLA Silk Prata</span></div>
-          <div class="product-info">
-            <h3>PLA Silk Prata</h3>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <div class="product-img-container"><span>Foto PLA Silk Ouro</span></div>
-          <div class="product-info">
-            <h3>PLA Silk Ouro</h3>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <div class="product-img-container"><span>Foto PLA Fosco Preto</span></div>
-          <div class="product-info">
-            <h3>PLA Fosco Preto Carbono</h3>
-          </div>
-        </div>
+        <div class="product-card"><div class="product-img-container"><span>Foto PLA Azul</span></div><div class="product-info"><h3>PLA Azul</h3></div></div>
+        <div class="product-card"><div class="product-img-container"><span>Foto PLA Vermelho</span></div><div class="product-info"><h3>PLA Vermelho</h3></div></div>
+        <div class="product-card"><div class="product-img-container"><span>Foto PLA Cinza</span></div><div class="product-info"><h3>PLA Cinza</h3></div></div>
+        <div class="product-card"><div class="product-img-container"><span>Foto PLA Verde</span></div><div class="product-info"><h3>PLA Verde</h3></div></div>
+        <div class="product-card"><div class="product-img-container"><span>Foto PLA Dourado</span></div><div class="product-info"><h3>PLA Dourado</h3></div></div>
+        <div class="product-card"><div class="product-img-container"><span>Foto PLA Madeira</span></div><div class="product-info"><h3>PLA Madeira</h3></div></div>
+        <div class="product-card"><div class="product-img-container"><span>Foto PLA Amarelo</span></div><div class="product-info"><h3>PLA Amarelo</h3></div></div>
+        <div class="product-card"><div class="product-img-container"><span>Foto PLA Branco</span></div><div class="product-info"><h3>PLA Branco</h3></div></div>
+        <div class="product-card"><div class="product-img-container"><span>Foto PLA Rosa</span></div><div class="product-info"><h3>PLA Rosa</h3></div></div>
+        <div class="product-card"><div class="product-img-container"><span>Foto PLA Azul Escuro</span></div><div class="product-info"><h3>PLA Azul Escuro</h3></div></div>
+        <div class="product-card"><div class="product-img-container"><span>Foto PLA Prata</span></div><div class="product-info"><h3>PLA Prata</h3></div></div>
+        <div class="product-card"><div class="product-img-container"><span>Foto PLA Laranja</span></div><div class="product-info"><h3>PLA Laranja</h3></div></div>
+        <div class="product-card"><div class="product-img-container"><span>Foto PLA Preto</span></div><div class="product-info"><h3>PLA Preto</h3></div></div>
+        <div class="product-card"><div class="product-img-container"><span>Foto PLA Silk Bronze</span></div><div class="product-info"><h3>PLA Silk Bronze</h3></div></div>
+        <div class="product-card"><div class="product-img-container"><span>Foto PLA Silk Prata</span></div><div class="product-info"><h3>PLA Silk Prata</h3></div></div>
+        <div class="product-card"><div class="product-img-container"><span>Foto PLA Silk Ouro</span></div><div class="product-info"><h3>PLA Silk Ouro</h3></div></div>
+        <div class="product-card"><div class="product-img-container"><span>Foto PLA Fosco Preto</span></div><div class="product-info"><h3>PLA Fosco Preto Carbono</h3></div></div>
       </div>
     </section>
 
@@ -384,54 +281,13 @@
         <span>🔹 Filamentos PETG Masterprint</span>
       </div>
       <div class="products-grid">
-        <div class="product-card">
-          <div class="product-img-container"><span>Foto PETG Preto</span></div>
-          <div class="product-info">
-            <h3>PETG Preto</h3>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <div class="product-img-container"><span>Foto PETG Branco</span></div>
-          <div class="product-info">
-            <h3>PETG Branco</h3>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <div class="product-img-container"><span>Foto PETG Azul</span></div>
-          <div class="product-info">
-            <h3>PETG Azul</h3>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <div class="product-img-container"><span>Foto PETG Verde</span></div>
-          <div class="product-info">
-            <h3>PETG Verde</h3>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <div class="product-img-container"><span>Foto PETG Translúcido Amarelo</span></div>
-          <div class="product-info">
-            <h3>PETG Translúcido Amarelo</h3>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <div class="product-img-container"><span>Foto PETG Translúcido Azul</span></div>
-          <div class="product-info">
-            <h3>PETG Translúcido Azul</h3>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <div class="product-img-container"><span>Foto PETG Fibra de Carbono</span></div>
-          <div class="product-info">
-            <h3>PETG Fibra de Carbono</h3>
-          </div>
-        </div>
+        <div class="product-card"><div class="product-img-container"><span>Foto PETG Preto</span></div><div class="product-info"><h3>PETG Preto</h3></div></div>
+        <div class="product-card"><div class="product-img-container"><span>Foto PETG Branco</span></div><div class="product-info"><h3>PETG Branco</h3></div></div>
+        <div class="product-card"><div class="product-img-container"><span>Foto PETG Azul</span></div><div class="product-info"><h3>PETG Azul</h3></div></div>
+        <div class="product-card"><div class="product-img-container"><span>Foto PETG Verde</span></div><div class="product-info"><h3>PETG Verde</h3></div></div>
+        <div class="product-card"><div class="product-img-container"><span>Foto PETG Translúcido Amarelo</span></div><div class="product-info"><h3>PETG Translúcido Amarelo</h3></div></div>
+        <div class="product-card"><div class="product-img-container"><span>Foto PETG Translúcido Azul</span></div><div class="product-info"><h3>PETG Translúcido Azul</h3></div></div>
+        <div class="product-card"><div class="product-img-container"><span>Foto PETG Fibra de Carbono</span></div><div class="product-info"><h3>PETG Fibra de Carbono</h3></div></div>
       </div>
     </section>
 
@@ -441,19 +297,8 @@
         <span>🔹 Filamentos ABS Masterprint</span>
       </div>
       <div class="products-grid">
-        <div class="product-card">
-          <div class="product-img-container"><span>Foto ABS Preto</span></div>
-          <div class="product-info">
-            <h3>ABS Preto</h3>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <div class="product-img-container"><span>Foto ABS Branco</span></div>
-          <div class="product-info">
-            <h3>ABS Branco</h3>
-          </div>
-        </div>
+        <div class="product-card"><div class="product-img-container"><span>Foto ABS Preto</span></div><div class="product-info"><h3>ABS Preto</h3></div></div>
+        <div class="product-card"><div class="product-img-container"><span>Foto ABS Branco</span></div><div class="product-info"><h3>ABS Branco</h3></div></div>
       </div>
     </section>
 
@@ -463,19 +308,8 @@
         <span>🔹 Filamentos Flexíveis TPU Masterprint</span>
       </div>
       <div class="products-grid">
-        <div class="product-card">
-          <div class="product-img-container"><span>Foto TPU Preto</span></div>
-          <div class="product-info">
-            <h3>TPU Flexível Preto</h3>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <div class="product-img-container"><span>Foto TPU Branco</span></div>
-          <div class="product-info">
-            <h3>TPU Flexível Branco</h3>
-          </div>
-        </div>
+        <div class="product-card"><div class="product-img-container"><span>Foto TPU Preto</span></div><div class="product-info"><h3>TPU Flexível Preto</h3></div></div>
+        <div class="product-card"><div class="product-img-container"><span>Foto TPU Branco</span></div><div class="product-info"><h3>TPU Flexível Branco</h3></div></div>
       </div>
     </section>
 
@@ -485,19 +319,8 @@
         <span>🔹 Filamentos ASA Masterprint</span>
       </div>
       <div class="products-grid">
-        <div class="product-card">
-          <div class="product-img-container"><span>Foto ASA Preto</span></div>
-          <div class="product-info">
-            <h3>ASA UV Preto</h3>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <div class="product-img-container"><span>Foto ASA Branco</span></div>
-          <div class="product-info">
-            <h3>ASA UV Branco</h3>
-          </div>
-        </div>
+        <div class="product-card"><div class="product-img-container"><span>Foto ASA Preto</span></div><div class="product-info"><h3>ASA UV Preto</h3></div></div>
+        <div class="product-card"><div class="product-img-container"><span>Foto ASA Branco</span></div><div class="product-info"><h3>ASA UV Branco</h3></div></div>
       </div>
     </section>
 
