@@ -1,7 +1,7 @@
 [
   {
     "id": "231010003",
-    "nome": "Filamento PLA Básico Azul Masterprint 1kg",
+    "nome": "Filamento PLA Azul Masterprint 1kg",
     "categoria": "Filamentos",
     "marca": "Masterprint",
     "material": "PLA",
@@ -11,7 +11,7 @@
   },
   {
     "id": "231010005",
-    "nome": "Filamento PLA Básico Vermelho Masterprint 1kg",
+    "nome": "Filamento PLA Vermelho Masterprint 1kg",
     "categoria": "Filamentos",
     "marca": "Masterprint",
     "material": "PLA",
@@ -21,7 +21,7 @@
   },
   {
     "id": "231010004",
-    "nome": "Filamento PLA Básico Cinza Masterprint 1kg",
+    "nome": "Filamento PLA Cinza Masterprint 1kg",
     "categoria": "Filamentos",
     "marca": "Masterprint",
     "material": "PLA",
@@ -31,7 +31,7 @@
   },
   {
     "id": "231010006",
-    "nome": "Filamento PLA Básico Verde Masterprint 1kg",
+    "nome": "Filamento PLA Verde Masterprint 1kg",
     "categoria": "Filamentos",
     "marca": "Masterprint",
     "material": "PLA",
@@ -41,7 +41,7 @@
   },
   {
     "id": "231010007",
-    "nome": "Filamento PLA Básico Dourado Masterprint 1kg",
+    "nome": "Filamento PLA Dourado Masterprint 1kg",
     "categoria": "Filamentos",
     "marca": "Masterprint",
     "material": "PLA",
@@ -51,7 +51,7 @@
   },
   {
     "id": "231010008",
-    "nome": "Filamento PLA Básico Madeira Masterprint 1kg",
+    "nome": "Filamento PLA Madeira Masterprint 1kg",
     "categoria": "Filamentos",
     "marca": "Masterprint",
     "material": "PLA",
@@ -61,7 +61,7 @@
   },
   {
     "id": "231010009",
-    "nome": "Filamento PLA Básico Amarelo Masterprint 1kg",
+    "nome": "Filamento PLA Amarelo Masterprint 1kg",
     "categoria": "Filamentos",
     "marca": "Masterprint",
     "material": "PLA",
@@ -71,7 +71,7 @@
   },
   {
     "id": "231010019",
-    "nome": "Filamento PLA Básico Branco Masterprint 1kg",
+    "nome": "Filamento PLA Branco Masterprint 1kg",
     "categoria": "Filamentos",
     "marca": "Masterprint",
     "material": "PLA",
@@ -81,7 +81,7 @@
   },
   {
     "id": "231010020",
-    "nome": "Filamento PLA Básico Rosa Masterprint 1kg",
+    "nome": "Filamento PLA Rosa Masterprint 1kg",
     "categoria": "Filamentos",
     "marca": "Masterprint",
     "material": "PLA",
@@ -91,7 +91,7 @@
   },
   {
     "id": "231010021",
-    "nome": "Filamento PLA Básico Azul Escuro Masterprint 1kg",
+    "nome": "Filamento PLA Azul Escuro Masterprint 1kg",
     "categoria": "Filamentos",
     "marca": "Masterprint",
     "material": "PLA",
@@ -101,7 +101,7 @@
   },
   {
     "id": "231010022",
-    "nome": "Filamento PLA Básico Prata Masterprint 1kg",
+    "nome": "Filamento PLA Prata Masterprint 1kg",
     "categoria": "Filamentos",
     "marca": "Masterprint",
     "material": "PLA",
@@ -111,7 +111,7 @@
   },
   {
     "id": "231010023",
-    "nome": "Filamento PLA Básico Laranja Masterprint 1kg",
+    "nome": "Filamento PLA Laranja Masterprint 1kg",
     "categoria": "Filamentos",
     "marca": "Masterprint",
     "material": "PLA",
@@ -121,7 +121,7 @@
   },
   {
     "id": "231010026",
-    "nome": "Filamento PLA Básico Preto Masterprint 1kg",
+    "nome": "Filamento PLA Preto Masterprint 1kg",
     "categoria": "Filamentos",
     "marca": "Masterprint",
     "material": "PLA",
@@ -161,7 +161,7 @@
   },
   {
     "id": "231010105",
-    "nome": "Filamento PLA Básico Fosco Preto Carbono Masterprint 1kg",
+    "nome": "Filamento PLA Fosco Preto Carbono Masterprint 1kg",
     "categoria": "Filamentos",
     "marca": "Masterprint",
     "material": "PLA",
@@ -171,7 +171,7 @@
   },
   {
     "id": "231020001",
-    "nome": "Filamento PETG Básico Preto Masterprint 1kg",
+    "nome": "Filamento PETG Preto Masterprint 1kg",
     "categoria": "Filamentos",
     "marca": "Masterprint",
     "material": "PETG",
@@ -181,7 +181,7 @@
   },
   {
     "id": "231020002",
-    "nome": "Filamento PETG Básico Branco Masterprint 1kg",
+    "nome": "Filamento PETG Branco Masterprint 1kg",
     "categoria": "Filamentos",
     "marca": "Masterprint",
     "material": "PETG",
@@ -191,7 +191,7 @@
   },
   {
     "id": "231020003",
-    "nome": "Filamento PETG Básico Azul Masterprint 1kg",
+    "nome": "Filamento PETG Azul Masterprint 1kg",
     "categoria": "Filamentos",
     "marca": "Masterprint",
     "material": "PETG",
@@ -201,7 +201,7 @@
   },
   {
     "id": "231020004",
-    "nome": "Filamento PETG Básico Verde Masterprint 1kg",
+    "nome": "Filamento PETG Verde Masterprint 1kg",
     "categoria": "Filamentos",
     "marca": "Masterprint",
     "material": "PETG",
@@ -209,13 +209,13 @@
     "link_shopee": "https://shopee.com.br",
     "ancora": "filamentos.html#petg"
   },
-    {
-    "id": "231020001",
-    "nome": "Filamento PETG Básico Vermelho Masterprint 1kg",
+  {
+    "id": "231020005",
+    "nome": "Filamento PETG Vermelho Masterprint 1kg",
     "categoria": "Filamentos",
     "marca": "Masterprint",
     "material": "PETG",
-    "descricao": "Cód. 231020001 - Resistência mecânica superior em Vermelho.",
+    "descricao": "Cód. 231020005 - Resistência mecânica superior em Vermelho.",
     "link_shopee": "https://shopee.com.br",
     "ancora": "filamentos.html#petg"
   },
@@ -240,6 +240,16 @@
     "ancora": "filamentos.html#petg"
   },
   {
+    "id": "231020008",
+    "nome": "Filamento PETG Translúcido Verde Masterprint 1kg",
+    "categoria": "Filamentos",
+    "marca": "Masterprint",
+    "material": "PETG",
+    "descricao": "Cód. 231020008 - Visual cristalino e translúcido verde.",
+    "link_shopee": "https://shopee.com.br",
+    "ancora": "filamentos.html#petg"
+  },
+  {
     "id": "231020031",
     "nome": "Filamento PETG Especial Fibra de Carbono Masterprint 1kg",
     "categoria": "Filamentos",
@@ -251,7 +261,7 @@
   },
   {
     "id": "231030001",
-    "nome": "Filamento ABS Básico Preto Masterprint 1kg",
+    "nome": "Filamento ABS Preto Masterprint 1kg",
     "categoria": "Filamentos",
     "marca": "Masterprint",
     "material": "ABS",
@@ -261,7 +271,7 @@
   },
   {
     "id": "231030002",
-    "nome": "Filamento ABS Básico Branco Masterprint 1kg",
+    "nome": "Filamento ABS Branco Masterprint 1kg",
     "categoria": "Filamentos",
     "marca": "Masterprint",
     "material": "ABS",
@@ -286,6 +296,46 @@
     "marca": "Masterprint",
     "material": "TPU",
     "descricao": "Cód. 231050002 - TPU flexível em tom branco.",
+    "link_shopee": "https://shopee.com.br",
+    "ancora": "filamentos.html#tpu"
+  },
+  {
+    "id": "231050003",
+    "nome": "Filamento TPU Flexível Azul Masterprint 1kg",
+    "categoria": "Filamentos",
+    "marca": "Masterprint",
+    "material": "TPU",
+    "descricao": "Cód. 231050003 - TPU flexível em tom azul.",
+    "link_shopee": "https://shopee.com.br",
+    "ancora": "filamentos.html#tpu"
+  },
+  {
+    "id": "231050004",
+    "nome": "Filamento TPU Flexível Vermelho Masterprint 1kg",
+    "categoria": "Filamentos",
+    "marca": "Masterprint",
+    "material": "TPU",
+    "descricao": "Cód. 231050004 - TPU flexível em tom vermelho.",
+    "link_shopee": "https://shopee.com.br",
+    "ancora": "filamentos.html#tpu"
+  },
+  {
+    "id": "231050005",
+    "nome": "Filamento TPU Flexível Amarelo Masterprint 1kg",
+    "categoria": "Filamentos",
+    "marca": "Masterprint",
+    "material": "TPU",
+    "descricao": "Cód. 231050005 - TPU flexível em tom amarelo.",
+    "link_shopee": "https://shopee.com.br",
+    "ancora": "filamentos.html#tpu"
+  },
+  {
+    "id": "231050006",
+    "nome": "Filamento TPU Flexível Verde Masterprint 1kg",
+    "categoria": "Filamentos",
+    "marca": "Masterprint",
+    "material": "TPU",
+    "descricao": "Cód. 231050006 - TPU flexível em tom verde.",
     "link_shopee": "https://shopee.com.br",
     "ancora": "filamentos.html#tpu"
   },
