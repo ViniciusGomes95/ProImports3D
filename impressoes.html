@@ -167,6 +167,67 @@
     }
     .btn-buy:hover { opacity: 0.9; }
 
+    /* MASCOTE MAIOR E DESTAQUE SEM FUNDO */
+    .avatar-widget {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 145px;
+      height: 145px;
+      z-index: 3000;
+      cursor: pointer;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.25s ease;
+    }
+
+    .avatar-widget:hover {
+      transform: scale(1.08);
+    }
+
+    .avatar-widget img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      filter: drop-shadow(0 12px 20px rgba(0, 0, 0, 0.25));
+    }
+
+    .avatar-tooltip {
+      position: absolute;
+      right: 150px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: #0f172a;
+      color: #ffffff;
+      padding: 0.5rem 0.85rem;
+      border-radius: 10px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.25s ease, transform 0.25s ease;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      font-family: 'Inter', sans-serif;
+    }
+
+    .avatar-tooltip::after {
+      content: '';
+      position: absolute;
+      right: -6px;
+      top: 50%;
+      transform: translateY(-50%);
+      border-width: 6px 0 6px 6px;
+      border-style: solid;
+      border-color: transparent transparent transparent #0f172a;
+    }
+
+    .avatar-widget:hover .avatar-tooltip {
+      opacity: 1;
+    }
+
     footer {
       background: #ffffff; border-top: 1px solid var(--border-color); padding: 2rem 2.5rem;
       text-align: center; color: var(--text-muted); font-size: 0.875rem; margin-top: auto;
@@ -182,6 +243,8 @@
       nav a { font-size: 0.85rem; padding: 0.3rem 0.4rem; }
       .container { padding: 2rem 1rem; }
       footer { padding: 2rem 1rem; }
+      .avatar-widget { width: 110px; height: 110px; bottom: 12px; right: 12px; }
+      .avatar-tooltip { display: none; }
     }
   </style>
 </head>
@@ -219,7 +282,6 @@
           <a href="index.html">Início</a>
           <a href="filamentos.html">Filamentos</a>
           <a href="impressoes.html" class="active">Impressões 3D</a>
-          <a href="contato.html">Contato</a>
         </nav>
       </div>
     </div>
@@ -240,7 +302,6 @@
             <h3>Chaveiro 5 Ganchos Gol GTI 3D</h3>
             <p>Porta-chaves de parede temático impresso em PETG com suporte reforçado de 5 ganchos.</p>
           </div>
-          <!--a href="https://shopee.com.br" target="_blank" class="btn-buy">Comprar na Shopee 🛍️</a-->
         </div>
       </div>
 
@@ -252,7 +313,6 @@
             <h3>Porta terço Sagrada Família</h3>
             <p>Porta terço da Sagrada Família, rica em detalhes.</p>
           </div>
-          <!--a href="https://shopee.com.br" target="_blank" class="btn-buy">Comprar na Shopee 🛍️</a-->
         </div>
       </div>
 
@@ -264,7 +324,6 @@
             <h3>Chaveiro 5 Ganchos Porsche GT3 3D</h3>
             <p>Porta-chaves automotivo exclusivo impresso em PETG com altíssima definição de detalhes.</p>
           </div>
-          <!--a href="https://shopee.com.br" target="_blank" class="btn-buy">Comprar na Shopee 🛍️</a-->
         </div>
       </div>
 
@@ -276,7 +335,6 @@
             <h3>Chaveiro Memorial Corinthians 1976</h3>
             <p>Edição comemorativa temática impressa em PETG com suporte para chaves de casa e veículos.</p>
           </div>
-          <!--a href="https://shopee.com.br" target="_blank" class="btn-buy">Comprar na Shopee 🛍️</a-->
         </div>
       </div>
 
@@ -288,7 +346,6 @@
             <h3>Cortadores de Massa & Biscoito</h3>
             <p>Produzidos em PETG de alta estabilidade e corte afiado para uso profissional na cozinha.</p>
           </div>
-          <!--a href="https://shopee.com.br" target="_blank" class="btn-buy">Comprar na Shopee 🛍️</a-->
         </div>
       </div>
 
@@ -300,7 +357,6 @@
             <h3>Estátua Arcanjo Gabriel</h3>
             <p>Estátueta do Arcanjo Gabriel, o mesmo possui uma trombeta, porta bandeira e as asas em dourado.</p>
           </div>
-          <!--a href="https://shopee.com.br" target="_blank" class="btn-buy">Comprar na Shopee 🛍️</a-->
         </div>
       </div>
 
@@ -312,17 +368,82 @@
             <h3>Action Figures</h3>
             <p>Impressão de personagens, figures detalhadas e peças personalizadas sob encomenda.</p>
           </div>
-          <a href="contato.html" class="btn-buy" style="background-color: var(--accent-cyan);">Orçar Projeto 💬</a>
+          <a href="https://wa.me/5511967761900?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Pro%20Imports%203D%20e%20gostaria%20de%20fazer%20um%20or%C3%A7amento%20de%20projeto." target="_blank" class="btn-buy" style="background-color: var(--accent-cyan);">Orçar Projeto 💬</a>
         </div>
       </div>
     </div>
 
   </div>
 
+  <!-- MASCOTE INTERATIVO DA PRO IMPORTS 3D -->
+  <a href="https://wa.me/5511967761900?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Pro%20Imports%203D%20e%20gostaria%20de%20fazer%20um%20or%C3%A7amento!" 
+     target="_blank" 
+     class="avatar-widget" 
+     id="mascotLink"
+     title="Fale conosco no WhatsApp!">
+     
+    <div class="avatar-tooltip">Fale comigo no WhatsApp! 💬</div>
+    
+    <img id="mascotImg" src="mascote/olhos-abertos.png" alt="Mascote Pro Imports 3D">
+  </a>
+
   <footer>
     <p>&copy; 2026 Pro Imports 3D. Todos os direitos reservados.</p>
   </footer>
 
   <script src="search.js"></script>
+
+  <!-- SCRIPT DE ANIMAÇÃO DA PISCADA DO MASCOTE -->
+  <script>
+    const mascotImg = document.getElementById('mascotImg');
+    const mascotLink = document.getElementById('mascotLink');
+
+    const imgAbertos = "mascote/olhos-abertos.png";
+    const imgMeio = "mascote/meio-abertos.png";
+    const imgFechados = "mascote/olhos-fechados.png";
+    const imgPiscando = "mascote/piscando.png";
+
+    let isHovered = false;
+
+    mascotLink.addEventListener('mouseenter', () => {
+      isHovered = true;
+      mascotImg.src = imgPiscando;
+    });
+
+    mascotLink.addEventListener('mouseleave', () => {
+      isHovered = false;
+    });
+
+    function executarPiscada() {
+      if (isHovered) return;
+
+      mascotImg.src = imgMeio;
+      
+      setTimeout(() => {
+        if (isHovered) return;
+        mascotImg.src = imgFechados;
+        
+        setTimeout(() => {
+          if (isHovered) return;
+          mascotImg.src = imgMeio;
+          
+          setTimeout(() => {
+            if (isHovered) return;
+            mascotImg.src = imgAbertos;
+          }, 120);
+        }, 150);
+      }, 120);
+    }
+
+    function agendarProximaPiscada() {
+      const tempoAleatorio = Math.random() * 3000 + 3000;
+      setTimeout(() => {
+        executarPiscada();
+        agendarProximaPiscada();
+      }, tempoAleatorio);
+    }
+
+    agendarProximaPiscada();
+  </script>
 </body>
 </html>
