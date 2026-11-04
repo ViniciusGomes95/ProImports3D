@@ -181,97 +181,65 @@
     .product-info { padding: 1.25rem; flex: 1; display: flex; flex-direction: column; justify-content: center; }
     .product-info h3 { font-size: 1.15rem; font-weight: 700; color: var(--text-main); margin-bottom: 0; line-height: 1.3; }
 
-    /* ESTILOS DO AVATAR QUE ACOMPANHA O MOUSE */
+    /* MASCOTE MAIOR E DESTAQUE SEM FUNDO */
     .avatar-widget {
       position: fixed;
-      bottom: 25px;
-      right: 25px;
-      width: 75px;
-      height: 75px;
-      background: #ffffff;
-      border: 3px solid var(--accent-cyan);
-      border-radius: 50%;
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+      bottom: 20px;
+      right: 20px;
+      width: 145px;
+      height: 145px;
       z-index: 3000;
+      cursor: pointer;
+      text-decoration: none;
       display: flex;
-      flex-direction: column;
       align-items: center;
       justify-content: center;
-      cursor: pointer;
-      transition: transform 0.2s ease;
+      transition: transform 0.25s ease;
     }
+
     .avatar-widget:hover {
       transform: scale(1.08);
     }
-    .avatar-face {
+
+    .avatar-widget img {
       width: 100%;
       height: 100%;
-      position: relative;
-      border-radius: 50%;
-      overflow: hidden;
-      background: #f1f5f9;
+      object-fit: contain;
+      filter: drop-shadow(0 12px 20px rgba(0, 0, 0, 0.25));
     }
-    /* Óculos / Armação */
-    .avatar-glasses {
+
+    .avatar-tooltip {
       position: absolute;
-      top: 22px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 52px;
-      height: 22px;
-      display: flex;
-      justify-content: space-between;
-      z-index: 2;
-    }
-    .glass-frame {
-      width: 23px;
-      height: 22px;
-      border: 3px solid #0f172a;
-      border-radius: 6px;
-      background: rgba(255, 255, 255, 0.6);
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .glass-bridge {
-      position: absolute;
-      top: 8px;
-      left: 20px;
-      width: 12px;
-      height: 3px;
+      right: 150px;
+      top: 50%;
+      transform: translateY(-50%);
       background: #0f172a;
+      color: #ffffff;
+      padding: 0.5rem 0.85rem;
+      border-radius: 10px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.25s ease, transform 0.25s ease;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      font-family: 'Inter', sans-serif;
     }
-    /* Olhos e Pupilas */
-    .eye {
-      width: 10px;
-      height: 10px;
-      background: #ffffff;
-      border-radius: 50%;
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-    }
-    .pupil {
-      width: 5px;
-      height: 5px;
-      background: #0284c7;
-      border-radius: 50%;
+
+    .avatar-tooltip::after {
+      content: '';
       position: absolute;
-      transition: transform 0.05s linear;
+      right: -6px;
+      top: 50%;
+      transform: translateY(-50%);
+      border-width: 6px 0 6px 6px;
+      border-style: solid;
+      border-color: transparent transparent transparent #0f172a;
     }
-    /* Sorriso */
-    .avatar-smile {
-      position: absolute;
-      bottom: 15px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 16px;
-      height: 8px;
-      border-bottom: 3px solid #0f172a;
-      border-radius: 0 0 10px 10px;
+
+    .avatar-widget:hover .avatar-tooltip {
+      opacity: 1;
     }
 
     footer {
@@ -290,10 +258,8 @@
       .container { padding: 2rem 1rem; }
       footer { padding: 2rem 1rem; }
       .sub-nav { justify-content: center; top: 155px; }
-      .avatar-widget { width: 60px; height: 60px; bottom: 15px; right: 15px; }
-      .avatar-glasses { top: 17px; width: 44px; height: 18px; }
-      .glass-frame { width: 19px; height: 18px; }
-      .glass-bridge { top: 6px; left: 16px; width: 10px; }
+      .avatar-widget { width: 110px; height: 110px; bottom: 12px; right: 12px; }
+      .avatar-tooltip { display: none; }
     }
   </style>
 </head>
@@ -331,7 +297,6 @@
           <a href="index.html">Início</a>
           <a href="filamentos.html" class="active">Filamentos</a>
           <a href="impressoes.html">Impressões 3D</a>
-          <a href="contato.html">Contato</a>
         </nav>
       </div>
     </div>
@@ -449,17 +414,17 @@
 
   </div>
 
-  <!-- ESTRUTURA DO AVATAR FIXO NO CANTO INFERIOR DIREITO -->
-  <div class="avatar-widget" id="avatarWidget" title="Pro Imports 3D">
-    <div class="avatar-face">
-      <div class="avatar-glasses">
-        <div class="glass-frame"><div class="eye"><div class="pupil"></div></div></div>
-        <div class="glass-bridge"></div>
-        <div class="glass-frame"><div class="eye"><div class="pupil"></div></div></div>
-      </div>
-      <div class="avatar-smile"></div>
-    </div>
-  </div>
+  <!-- MASCOTE INTERATIVO DA PRO IMPORTS 3D -->
+  <a href="https://wa.me/5511967761900?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Pro%20Imports%203D%20e%20gostaria%20de%20fazer%20um%20or%C3%A7amento!" 
+     target="_blank" 
+     class="avatar-widget" 
+     id="mascotLink"
+     title="Fale conosco no WhatsApp!">
+     
+    <div class="avatar-tooltip">Fale comigo no WhatsApp! 💬</div>
+    
+    <img id="mascotImg" src="mascote/olhos-abertos.png" alt="Mascote Pro Imports 3D">
+  </a>
 
   <footer>
     <p>&copy; 2026 Pro Imports 3D. Todos os direitos reservados.</p>
@@ -467,29 +432,57 @@
 
   <script src="search.js"></script>
 
-  <!-- SCRIPT PARA OS OLHOS ACOMPANHAREM O MOUSE -->
+  <!-- SCRIPT DE ANIMAÇÃO DA PISCADA DO MASCOTE -->
   <script>
-    document.addEventListener('mousemove', (e) => {
-      const pupils = document.querySelectorAll('.pupil');
-      pupils.forEach((pupil) => {
-        const eye = pupil.parentElement;
-        const rect = eye.getBoundingClientRect();
-        
-        // Posição central do olho na tela
-        const eyeX = rect.left + rect.width / 2;
-        const eyeY = rect.top + rect.height / 2;
-        
-        // Ângulo até o ponteiro do mouse
-        const angle = Math.atan2(e.clientY - eyeY, e.clientX - eyeX);
-        
-        // Raio máximo de movimento da pupila dentro do olho
-        const maxDistance = 2.5; 
-        const x = Math.cos(angle) * maxDistance;
-        const y = Math.sin(angle) * maxDistance;
-        
-        pupil.style.transform = `translate(${x}px, ${y}px)`;
-      });
+    const mascotImg = document.getElementById('mascotImg');
+    const mascotLink = document.getElementById('mascotLink');
+
+    const imgAbertos = "mascote/olhos-abertos.png";
+    const imgMeio = "mascote/meio-abertos.png";
+    const imgFechados = "mascote/olhos-fechados.png";
+    const imgPiscando = "mascote/piscando.png";
+
+    let isHovered = false;
+
+    mascotLink.addEventListener('mouseenter', () => {
+      isHovered = true;
+      mascotImg.src = imgPiscando;
     });
+
+    mascotLink.addEventListener('mouseleave', () => {
+      isHovered = false;
+    });
+
+    function executarPiscada() {
+      if (isHovered) return;
+
+      mascotImg.src = imgMeio;
+      
+      setTimeout(() => {
+        if (isHovered) return;
+        mascotImg.src = imgFechados;
+        
+        setTimeout(() => {
+          if (isHovered) return;
+          mascotImg.src = imgMeio;
+          
+          setTimeout(() => {
+            if (isHovered) return;
+            mascotImg.src = imgAbertos;
+          }, 120);
+        }, 150);
+      }, 120);
+    }
+
+    function agendarProximaPiscada() {
+      const tempoAleatorio = Math.random() * 3000 + 3000;
+      setTimeout(() => {
+        executarPiscada();
+        agendarProximaPiscada();
+      }, tempoAleatorio);
+    }
+
+    agendarProximaPiscada();
   </script>
 </body>
 </html>
