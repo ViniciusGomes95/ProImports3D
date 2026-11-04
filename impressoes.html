@@ -47,7 +47,7 @@
       z-index: -1; pointer-events: none;
     }
 
-    /* HEADER FLUIDO */
+    /* HEADER FLUIDO E CENTRALIZADO */
     header {
       width: 100%; background: rgba(255, 255, 255, 0.92); backdrop-filter: blur(12px);
       border-bottom: 2px solid var(--border-color); position: sticky; top: 0; z-index: 1000;
@@ -56,7 +56,8 @@
 
     .header-container {
       width: 100%; padding: 0.85rem 2.5rem;
-      display: flex; justify-content: space-between; align-items: center; position: relative;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      gap: 0.85rem; position: relative;
     }
 
     .header-track {
@@ -80,11 +81,14 @@
 
     @keyframes bobbing { 0% { transform: translateY(0px); } 100% { transform: translateY(-3px); } }
 
-    .nav-logo img { height: 40px; width: auto; display: block; }
+    .nav-logo img { height: 42px; width: auto; display: block; }
     
-    .header-right { display: flex; align-items: center; gap: 1.5rem; }
+    .header-right { 
+      display: flex; align-items: center; justify-content: center;
+      gap: 1.5rem; flex-wrap: wrap; width: 100%;
+    }
 
-    nav { display: flex; gap: 1rem; align-items: center; }
+    nav { display: flex; gap: 1rem; align-items: center; justify-content: center; flex-wrap: wrap; }
     nav a {
       text-decoration: none; color: var(--text-main); font-weight: 600; font-size: 0.95rem;
       padding: 0.4rem 0.6rem; border-radius: 8px; transition: all 0.25s ease; position: relative;
@@ -96,20 +100,20 @@
       background: linear-gradient(90deg, var(--accent-cyan), var(--accent-orange)); border-radius: 10px;
     }
 
-    .search-box { position: relative; display: flex; align-items: center; }
+    .search-box { position: relative; display: flex; align-items: center; justify-content: center; }
     .search-input {
       padding: 0.45rem 1rem 0.45rem 2.2rem; border: 1px solid var(--border-color);
       border-radius: 20px; font-size: 0.85rem; outline: none; background: #f1f5f9;
-      transition: all 0.25s ease; width: 170px;
+      transition: all 0.25s ease; width: 190px; text-align: left;
     }
     .search-input:focus {
-      width: 220px; background: #ffffff; border-color: var(--accent-cyan);
+      width: 240px; background: #ffffff; border-color: var(--accent-cyan);
       box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.15);
     }
     .search-icon { position: absolute; left: 0.75rem; font-size: 0.8rem; color: var(--text-muted); pointer-events: none; }
 
     .search-results {
-      position: absolute; top: 110%; right: 0; width: 280px; background: #ffffff;
+      position: absolute; top: 110%; left: 50%; transform: translateX(-50%); width: 280px; background: #ffffff;
       border: 1px solid var(--border-color); border-radius: 12px;
       box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1); display: none; z-index: 2000;
       overflow: hidden; max-height: 350px; overflow-y: auto; text-align: left;
@@ -169,11 +173,12 @@
     }
 
     @media (max-width: 768px) {
-      .header-container { flex-direction: column; gap: 0.75rem; padding: 0.8rem 1rem; }
-      .header-right { flex-direction: column; gap: 0.5rem; width: 100%; justify-content: center; }
+      .header-container { padding: 0.8rem 1rem; gap: 0.6rem; }
+      .header-right { gap: 0.6rem; width: 100%; justify-content: center; }
+      .search-box { width: 100%; max-width: 280px; }
       .search-input { width: 100%; }
       .search-input:focus { width: 100%; }
-      nav { gap: 0.5rem; justify-content: center; width: 100%; }
+      nav { gap: 0.4rem; justify-content: center; width: 100%; }
       nav a { font-size: 0.85rem; padding: 0.3rem 0.4rem; }
       .container { padding: 2rem 1rem; }
       footer { padding: 2rem 1rem; }
@@ -293,7 +298,7 @@
           <div>
             <span class="badge-service">Estátua</span>
             <h3>Estátua Arcanjo Gabriel</h3>
-            <p>Estátueta do Arcanjo Gabriel, o memso possui uma trombeta, porta bandeira e as asas em dourado.</p>
+            <p>Estátueta do Arcanjo Gabriel, o mesmo possui uma trombeta, porta bandeira e as asas em dourado.</p>
           </div>
           <!--a href="https://shopee.com.br" target="_blank" class="btn-buy">Comprar na Shopee 🛍️</a-->
         </div>
