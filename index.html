@@ -170,6 +170,67 @@
     h1 { font-size: 2.5rem; font-weight: 800; color: var(--text-main); margin-bottom: 0.75rem; letter-spacing: -0.02em; }
     .subtitle { font-size: 1.15rem; color: var(--text-muted); max-width: 550px; margin: 0 auto; line-height: 1.6; }
 
+    /* ESTILOS DO NOVO MASCOTE FLUTUANTE (WHATSAPP) */
+    .avatar-widget {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      width: 110px;
+      height: 110px;
+      z-index: 3000;
+      cursor: pointer;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.25s ease;
+    }
+
+    .avatar-widget:hover {
+      transform: scale(1.08);
+    }
+
+    .avatar-widget img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.2));
+    }
+
+    .avatar-tooltip {
+      position: absolute;
+      right: 120px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: #0f172a;
+      color: #ffffff;
+      padding: 0.5rem 0.85rem;
+      border-radius: 10px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.25s ease, transform 0.25s ease;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      font-family: 'Inter', sans-serif;
+    }
+
+    .avatar-tooltip::after {
+      content: '';
+      position: absolute;
+      right: -6px;
+      top: 50%;
+      transform: translateY(-50%);
+      border-width: 6px 0 6px 6px;
+      border-style: solid;
+      border-color: transparent transparent transparent #0f172a;
+    }
+
+    .avatar-widget:hover .avatar-tooltip {
+      opacity: 1;
+    }
+
     footer {
       background: #ffffff; border-top: 1px solid var(--border-color);
       padding: 2rem 2.5rem; text-align: center; color: var(--text-muted); font-size: 0.875rem; margin-top: auto;
@@ -184,6 +245,8 @@
       nav { gap: 0.4rem; justify-content: center; width: 100%; }
       nav a { font-size: 0.85rem; padding: 0.3rem 0.4rem; }
       h1 { font-size: 2rem; }
+      .avatar-widget { width: 90px; height: 90px; bottom: 15px; right: 15px; }
+      .avatar-tooltip { display: none; }
     }
   </style>
 </head>
@@ -221,7 +284,6 @@
           <a href="index.html" class="active">Início</a>
           <a href="filamentos.html">Filamentos</a>
           <a href="impressoes.html">Impressões 3D</a>
-          <a href="contato.html">Contato</a>
         </nav>
       </div>
     </div>
@@ -245,10 +307,75 @@
     </p>
   </div>
 
+  <!-- MASCOTE INTERATIVO DA PRO IMPORTS 3D (PASTA MASCOTE) -->
+  <a href="https://wa.me/55SEUNUMERO?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Pro%20Imports%203D%20e%20gostaria%20de%20fazer%20um%20or%C3%A7amento!" 
+     target="_blank" 
+     class="avatar-widget" 
+     id="mascotLink"
+     title="Fale conosco no WhatsApp!">
+     
+    <div class="avatar-tooltip">Fale comigo no WhatsApp! 💬</div>
+    
+    <img id="mascotImg" src="mascote/Mascote 3D PRO IMPORTS com Filamento olhos abertos.png" alt="Mascote Pro Imports 3D">
+  </a>
+
   <footer>
     <p>&copy; 2026 Pro Imports 3D. Todos os direitos reservados.</p>
   </footer>
 
   <script src="search.js"></script>
+
+  <!-- SCRIPT DE ANIMAÇÃO DA PISCADA DO MASCOTE -->
+  <script>
+    const mascotImg = document.getElementById('mascotImg');
+    const mascotLink = document.getElementById('mascotLink');
+
+    const imgAbertos = "mascote/Mascote 3D PRO IMPORTS com Filamento olhos abertos.png";
+    const imgMeio = "mascote/Mascote 3D Pro Imports com Filamento olhos meio abertos.png";
+    const imgFechados = "mascote/Mascote 3D Pro Imports com Filamento olhos fechados.png";
+    const imgPiscando = "mascote/Mascote Pro Imports com Filamento piscando.png";
+
+    let isHovered = false;
+
+    mascotLink.addEventListener('mouseenter', () => {
+      isHovered = true;
+      mascotImg.src = imgPiscando;
+    });
+
+    mascotLink.addEventListener('mouseleave', () => {
+      isHovered = false;
+    });
+
+    function executarPiscada() {
+      if (isHovered) return;
+
+      mascotImg.src = imgMeio;
+      
+      setTimeout(() => {
+        if (isHovered) return;
+        mascotImg.src = imgFechados;
+        
+        setTimeout(() => {
+          if (isHovered) return;
+          mascotImg.src = imgMeio;
+          
+          setTimeout(() => {
+            if (isHovered) return;
+            mascotImg.src = imgAbertos;
+          }, 120);
+        }, 150);
+      }, 120);
+    }
+
+    function agendarProximaPiscada() {
+      const tempoAleatorio = Math.random() * 3000 + 3000;
+      setTimeout(() => {
+        executarPiscada();
+        agendarProximaPiscada();
+      }, tempoAleatorio);
+    }
+
+    agendarProximaPiscada();
+  </script>
 </body>
 </html>
