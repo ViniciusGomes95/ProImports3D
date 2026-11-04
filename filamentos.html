@@ -29,6 +29,13 @@
     body {
       font-family: 'Inter', sans-serif;
       background-color: var(--bg-body);
+      /* Textura sutil de listras/linhas diagonais no fundo para destacar os quadros */
+      background-image: linear-gradient(135deg, rgba(2, 132, 199, 0.02) 25%, transparent 25%), 
+                        linear-gradient(225deg, rgba(2, 132, 199, 0.02) 25%, transparent 25%), 
+                        linear-gradient(45deg, rgba(2, 132, 199, 0.02) 25%, transparent 25%), 
+                        linear-gradient(315deg, rgba(2, 132, 199, 0.02) 25%, transparent 25%);
+      background-position: 10px 0, 10px 0, 0 0, 0 0;
+      background-size: 20px 20px;
       color: var(--text-main);
       min-height: 100vh;
       display: flex; flex-direction: column;
@@ -171,23 +178,11 @@
     .product-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); border-color: rgba(2, 132, 199, 0.3); }
 
     .product-img-container {
-      width: 100%; 
-      height: 270px;
-      background: #ffffff; 
-      display: flex; 
-      align-items: center; 
-      justify-content: center;
-      color: var(--text-muted); 
-      font-size: 0.9rem; 
-      border-bottom: 1px solid var(--border-color); 
-      overflow: hidden;
-      padding: 10px;
+      width: 100%; height: 230px; background: #ffffff; display: flex; align-items: center; justify-content: center;
+      color: var(--text-muted); font-size: 0.9rem; border-bottom: 1px solid var(--border-color); overflow: hidden;
     }
-    
     .product-img-container img {
-      width: 100%; 
-      height: 100%; 
-      object-fit: contain;
+      width: 100%; height: 100%; object-fit: cover;
     }
 
     .product-info { padding: 1.25rem; flex: 1; display: flex; flex-direction: column; justify-content: center; }
@@ -267,234 +262,3 @@
       .search-input:focus { width: 100%; }
       nav { gap: 0.4rem; justify-content: center; width: 100%; }
       nav a { font-size: 0.85rem; padding: 0.3rem 0.4rem; }
-      .container { padding: 2rem 1rem; }
-      footer { padding: 2rem 1rem; }
-      .sub-nav { justify-content: center; top: 155px; }
-      .avatar-widget { width: 110px; height: 110px; bottom: 12px; right: 12px; }
-      .avatar-tooltip { display: none; }
-    }
-  </style>
-</head>
-<body>
-
-  <div class="bg-gradient-1"></div>
-  <div class="bg-gradient-2"></div>
-
-  <header>
-    <div class="header-container">
-      <div class="nav-logo">
-        <a href="index.html"><img src="logosemfundo.png" alt="Pro Imports 3D"></a>
-      </div>
-
-      <svg class="funko-walker" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect x="12" y="6" width="40" height="30" rx="8" fill="#1e293b"/>
-        <path d="M12 14C12 9.58172 15.5817 6 20 6H44C48.4183 6 52 9.58172 52 14V18H12V14Z" fill="#0f172a"/>
-        <circle cx="24" cy="22" r="4" fill="#ffffff"/>
-        <circle cx="40" cy="22" r="4" fill="#ffffff"/>
-        <circle cx="25" cy="21" r="1.5" fill="#0284c7"/>
-        <circle cx="41" cy="21" r="1.5" fill="#0284c7"/>
-        <rect x="24" y="38" width="16" height="14" rx="4" fill="#0284c7"/>
-        <circle cx="25" cy="54" r="3" fill="#f97316"/>
-        <circle cx="39" cy="54" r="3" fill="#f97316"/>
-      </svg>
-
-      <div class="header-right">
-        <div class="search-box">
-          <span class="search-icon">🔍</span>
-          <input type="text" id="searchInput" class="search-input" placeholder="Buscar cor ou material..." onkeyup="executarBuscaGlobal()">
-          <div id="searchResults" class="search-results"></div>
-        </div>
-
-        <nav>
-          <a href="index.html">Início</a>
-          <a href="filamentos.html" class="active">Filamentos</a>
-          <a href="impressoes.html">Impressões 3D</a>
-        </nav>
-      </div>
-    </div>
-    <div class="header-track"></div>
-  </header>
-
-  <div class="container">
-    <h1>Catálogo de Filamentos Masterprint</h1>
-    <p class="subtitle">Selecione o tipo de material desejado para navegar pelas categorias:</p>
-
-    <div class="sub-nav">
-      <a href="#pla" class="sub-btn">PLA</a>
-      <a href="#petg" class="sub-btn">PETG</a>
-      <a href="#abs" class="sub-btn">ABS</a>
-      <a href="#tpu" class="sub-btn">TPU</a>
-      <a href="#asa" class="sub-btn">ASA</a>
-    </div>
-
-   <!-- 1. CATEGORIA PLA -->
-    <section id="pla" class="material-section">
-      <div class="category-title">
-        <span>🔹 Filamentos PLA Masterprint</span>
-      </div>
-      <div class="products-grid">
-        <div class="product-card"><div class="product-img-container"><img src="filamento-img/Preto PLA.jpg" alt="PLA Preto"></div><div class="product-info"><h3>PLA Preto</h3></div></div>
-        <div class="product-card"><div class="product-img-container"><img src="filamento-img/Branco PLA.jpg" alt="PLA Branco"></div><div class="product-info"><h3>PLA Branco</h3></div></div>
-        <div class="product-card"><div class="product-img-container"><img src="filamento-img/Azul PLA.jpg" alt="PLA Azul"></div><div class="product-info"><h3>PLA Azul</h3></div></div>  
-        <div class="product-card"><div class="product-img-container"><img src="filamento-img/Vermelho PLA.jpg" alt="PLA Vermelho"></div><div class="product-info"><h3>PLA Vermelho</h3></div></div>
-        <div class="product-card"><div class="product-img-container"><img src="filamento-img/Cinza PLA.jpg" alt="PLA Cinza"></div><div class="product-info"><h3>PLA Cinza</h3></div></div>
-        <div class="product-card"><div class="product-img-container"><img src="filamento-img/Verde PLA.jpg" alt="PLA Verde"></div><div class="product-info"><h3>PLA Verde</h3></div></div>
-        <div class="product-card"><div class="product-img-container"><img src="filamento-img/Dourado PLA.jpg" alt="PLA Dourado"></div><div class="product-info"><h3>PLA Dourado</h3></div></div>
-        <div class="product-card"><div class="product-img-container"><img src="filamento-img/Madeira PLA.jpg" alt="PLA Madeira"></div><div class="product-info"><h3>PLA Madeira</h3></div></div>
-        <div class="product-card"><div class="product-img-container"><img src="filamento-img/Amarelo PLA.jpg" alt="PLA Amarelo"></div><div class="product-info"><h3>PLA Amarelo</h3></div></div>
-        <div class="product-card"><div class="product-img-container"><img src="filamento-img/Rosa PLA.jpg" alt="PLA Rosa"></div><div class="product-info"><h3>PLA Rosa</h3></div></div>
-        <div class="product-card"><div class="product-img-container"><img src="filamento-img/Azul Escuro PLA.jpg" alt="PLA Azul Escuro"></div><div class="product-info"><h3>PLA Azul Escuro</h3></div></div>
-        <div class="product-card"><div class="product-img-container"><img src="filamento-img/Prata PLA.jpg" alt="PLA Prata"></div><div class="product-info"><h3>PLA Prata</h3></div></div>
-        <div class="product-card"><div class="product-img-container"><img src="filamento-img/Laranja PLA.jpg" alt="PLA Laranja"></div><div class="product-info"><h3>PLA Laranja</h3></div></div>
-        <div class="product-card"><div class="product-img-container"><img src="filamento-img/Roxo PLA.jpg" alt="PLA Roxo"></div><div class="product-info"><h3>PLA Roxo</h3></div></div>
-        <div class="product-card"><div class="product-img-container"><img src="filamento-img/Lavanda PLA.jpg" alt="PLA Lavanda"></div><div class="product-info"><h3>PLA Lavanda</h3></div></div>
-        <div class="product-card"><div class="product-img-container"><img src="filamento-img/Marrom PLA.jpg" alt="PLA Marrom"></div><div class="product-info"><h3>PLA Marrom</h3></div></div>
-        <div class="product-card"><div class="product-img-container"><img src="filamento-img/Cobre PLA.jpg" alt="PLA Cobre"></div><div class="product-info"><h3>PLA Cobre</h3></div></div>
-        <div class="product-card"><div class="product-img-container"><img src="filamento-img/Transparente PLA.jpg" alt="PLA Transparente"></div><div class="product-info"><h3>PLA Transparente</h3></div></div>
-        <div class="product-card"><div class="product-img-container"><img src="filamento-img/Verde Bambu PLA.jpg" alt="PLA Verde Bambu"></div><div class="product-info"><h3>PLA Verde Bambu</h3></div></div>
-        <div class="product-card"><div class="product-img-container"><img src="filamento-img/Bronze silk PLA.jpg" alt="PLA Silk Bronze"></div><div class="product-info"><h3>PLA Silk Bronze</h3></div></div>
-        <div class="product-card"><div class="product-img-container"><img src="filamento-img/Prata silk PLA.jpg" alt="PLA Silk Prata"></div><div class="product-info"><h3>PLA Silk Prata</h3></div></div>
-        <div class="product-card"><div class="product-img-container"><img src="filamento-img/Dourado silk PLA.jpg" alt="PLA Silk Dourado"></div><div class="product-info"><h3>PLA Silk Dourado</h3></div></div>
-        <div class="product-card"><div class="product-img-container"><img src="filamento-img/Vermelho silk PLA.jpg" alt="PLA Silk Vermelho"></div><div class="product-info"><h3>PLA Silk Vermelho</h3></div></div>
-        <div class="product-card"><div class="product-img-container"><img src="filamento-img/Verde silk PLA.jpg" alt="PLA Silk Verde"></div><div class="product-info"><h3>PLA Silk Verde</h3></div></div>
-        <div class="product-card"><div class="product-img-container"><img src="filamento-img/Fosco Preto PLA.jpg" alt="PLA Fosco Preto Carbono"></div><div class="product-info"><h3>PLA Fosco Preto Carbono</h3></div></div>
-      </div>
-    </section>
-
-   <!-- 2. CATEGORIA PETG (CATÁLOGO COMPLETO) -->
-    <section id="petg" class="material-section">
-      <div class="category-title">
-        <span>🔹 Filamentos PETG Masterprint</span>
-      </div>
-      <div class="products-grid">
-        <div class="product-card"><div class="product-img-container"><img src="filamento-img/Preto PETG.jpg" alt="PETG Preto"></div><div class="product-info"><h3>PETG Preto</h3></div></div>
-        <div class="product-card"><div class="product-img-container"><img src="filamento-img/Branco PETG.jpg" alt="PETG Branco"></div><div class="product-info"><h3>PETG Branco</h3></div></div>
-        <div class="product-card"><div class="product-img-container"><img src="filamento-img/Azul PETG.jpg" alt="PETG Azul"></div><div class="product-info"><h3>PETG Azul</h3></div></div>
-        <div class="product-card"><div class="product-img-container"><img src="filamento-img/Verde PETG.jpg" alt="PETG Verde"></div><div class="product-info"><h3>PETG Verde</h3></div></div>
-        <div class="product-card"><div class="product-img-container"><img src="filamento-img/Vermelho PETG.jpg" alt="PETG Vermelho"></div><div class="product-info"><h3>PETG Vermelho</h3></div></div>
-        <div class="product-card"><div class="product-img-container"><img src="filamento-img/Amarelo PETG.jpg" alt="PETG Amarelo"></div><div class="product-info"><h3>PETG Amarelo</h3></div></div>
-        <div class="product-card"><div class="product-img-container"><img src="filamento-img/Cinza PETG.jpg" alt="PETG Cinza"></div><div class="product-info"><h3>PETG Cinza</h3></div></div>
-        <div class="product-card"><div class="product-img-container"><img src="filamento-img/Laranja PETG.jpg" alt="PETG Laranja"></div><div class="product-info"><h3>PETG Laranja</h3></div></div>
-        <div class="product-card"><div class="product-img-container"><img src="filamento-img/Rosa PETG.jpg" alt="PETG Rosa"></div><div class="product-info"><h3>PETG Rosa</h3></div></div>
-        <div class="product-card"><div class="product-img-container"><img src="filamento-img/Roxo PETG.jpg" alt="PETG Roxo"></div><div class="product-info"><h3>PETG Roxo</h3></div></div>
-        <div class="product-card"><div class="product-img-container"><img src="filamento-img/Transparente PETG.jpg" alt="PETG Transparente"></div><div class="product-info"><h3>PETG Transparente</h3></div></div>
-        <div class="product-card"><div class="product-img-container"><img src="filamento-img/Translúcido Amarelo PETG.jpg" alt="PETG Translúcido Amarelo"></div><div class="product-info"><h3>PETG Translúcido Amarelo</h3></div></div>
-        <div class="product-card"><div class="product-img-container"><img src="filamento-img/Azul translucido PETG.jpg" alt="PETG Translúcido Azul"></div><div class="product-info"><h3>PETG Translúcido Azul</h3></div></div>
-        <div class="product-card"><div class="product-img-container"><img src="filamento-img/Verde translucido PETG.jpg" alt="PETG Translúcido Verde"></div><div class="product-info"><h3>PETG Translúcido Verde</h3></div></div>
-        <div class="product-card"><div class="product-img-container"><img src="filamento-img/Vermelho translucido PETG.jpg" alt="PETG Translúcido Vermelho"></div><div class="product-info"><h3>PETG Translúcido Vermelho</h3></div></div>
-        <div class="product-card"><div class="product-img-container"><img src="filamento-img/Branco Fosco PETG.jpg" alt="PETG Branco Fosco"></div><div class="product-info"><h3>PETG Branco Fosco</h3></div></div>
-        <div class="product-card"><div class="product-img-container"><img src="filamento-img/Fibra de Carbono PETG.jpg" alt="PETG Fibra de Carbono"></div><div class="product-info"><h3>PETG Fibra de Carbono</h3></div></div>
-      </div>
-    </section>
-
-    <!-- 3. CATEGORIA ABS -->
-    <section id="abs" class="material-section">
-      <div class="category-title">
-        <span>🔹 Filamentos ABS Masterprint</span>
-      </div>
-      <div class="products-grid">
-        <div class="product-card"><div class="product-img-container"><img src="filamento-img/Preto ABS.jpg" alt="ABS Preto"></div><div class="product-info"><h3>ABS Preto</h3></div></div>
-        <div class="product-card"><div class="product-img-container"><img src="filamento-img/Branco ABS.jpg" alt="ABS Branco"></div><div class="product-info"><h3>ABS Branco</h3></div></div>
-      </div>
-    </section>
-
-    <!-- 4. CATEGORIA TPU (COMPLETO COM TODAS AS CORES) -->
-    <section id="tpu" class="material-section">
-      <div class="category-title">
-        <span>🔹 Filamentos Flexíveis TPU Masterprint</span>
-      </div>
-      <div class="products-grid">
-        <div class="product-card"><div class="product-img-container"><img src="filamento-img/Preto TPU.jpg" alt="TPU Flexível Preto"></div><div class="product-info"><h3>TPU Flexível Preto</h3></div></div>
-        <div class="product-card"><div class="product-img-container"><img src="filamento-img/Branco TPU.jpg" alt="TPU Flexível Branco"></div><div class="product-info"><h3>TPU Flexível Branco</h3></div></div>
-        <div class="product-card"><div class="product-img-container"><img src="filamento-img/Azul TPU.jpg" alt="TPU Flexível Azul"></div><div class="product-info"><h3>TPU Flexível Azul</h3></div></div>
-        <div class="product-card"><div class="product-img-container"><img src="filamento-img/Vermelho TPU.jpg" alt="TPU Flexível Vermelho"></div><div class="product-info"><h3>TPU Flexível Vermelho</h3></div></div>
-        <div class="product-card"><div class="product-img-container"><img src="filamento-img/Amarelo TPU.jpg" alt="TPU Flexível Amarelo"></div><div class="product-info"><h3>TPU Flexível Amarelo</h3></div></div>
-        <div class="product-card"><div class="product-img-container"><img src="filamento-img/Verde TPU.jpg" alt="TPU Flexível Verde"></div><div class="product-info"><h3>TPU Flexível Verde</h3></div></div>
-      </div>
-    </section>
-
-    <!-- 5. CATEGORIA ASA -->
-    <section id="asa" class="material-section">
-      <div class="category-title">
-        <span>🔹 Filamentos ASA Masterprint</span>
-      </div>
-      <div class="products-grid">
-        <div class="product-card"><div class="product-img-container"><img src="filamento-img/Preto ASA.jpg" alt="ASA Preto"></div><div class="product-info"><h3>ASA Preto</h3></div></div>
-        <div class="product-card"><div class="product-img-container"><img src="filamento-img/Branco ASA.jpg" alt="ASA Branco"></div><div class="product-info"><h3>ASA Branco</h3></div></div>
-      </div>
-    </section>
-
-  </div>
-
-  <!-- MASCOTE INTERATIVO DA PRO IMPORTS 3D -->
-  <a href="https://wa.me/5511967761900?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Pro%20Imports%203D%20e%20gostaria%20de%20fazer%20um%20or%C3%A7amento!" 
-     target="_blank" 
-     class="avatar-widget" 
-     id="mascotLink"
-     title="Fale conosco no WhatsApp!">
-     
-    <div class="avatar-tooltip">Fale comigo no WhatsApp! 💬</div>
-    
-    <img id="mascotImg" src="mascote/olhos-abertos.png" alt="Mascote Pro Imports 3D">
-  </a>
-
-  <footer>
-    <p>&copy; 2026 Pro Imports 3D. Todos os direitos reservados.</p>
-  </footer>
-
-  <script src="search.js"></script>
-
-  <!-- SCRIPT DE ANIMAÇÃO DA PISCADA DO MASCOTE -->
-  <script>
-    const mascotImg = document.getElementById('mascotImg');
-    const mascotLink = document.getElementById('mascotLink');
-
-    const imgAbertos = "mascote/olhos-abertos.png";
-    const imgMeio = "mascote/meio-abertos.png";
-    const imgFechados = "mascote/olhos-fechados.png";
-    const imgPiscando = "mascote/piscando.png";
-
-    let isHovered = false;
-
-    mascotLink.addEventListener('mouseenter', () => {
-      isHovered = true;
-      mascotImg.src = imgPiscando;
-    });
-
-    mascotLink.addEventListener('mouseleave', () => {
-      isHovered = false;
-    });
-
-    function executarPiscada() {
-      if (isHovered) return;
-
-      mascotImg.src = imgMeio;
-      
-      setTimeout(() => {
-        if (isHovered) return;
-        mascotImg.src = imgFechados;
-        
-        setTimeout(() => {
-          if (isHovered) return;
-          mascotImg.src = imgMeio;
-          
-          setTimeout(() => {
-            if (isHovered) return;
-            mascotImg.src = imgAbertos;
-          }, 120);
-        }, 150);
-      }, 120);
-    }
-
-    function agendarProximaPiscada() {
-      const tempoAleatorio = Math.random() * 3000 + 3000;
-      setTimeout(() => {
-        executarPiscada();
-        agendarProximaPiscada();
-      }, tempoAleatorio);
-    }
-
-    agendarProximaPiscada();
-  </script>
-</body>
-</html>
